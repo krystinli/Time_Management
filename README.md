@@ -7,3 +7,5 @@ track my hours spent in different categories
 3. Coding Exercise (like Leetcode, Hackerank, etc.)
 4. Management (Finance, Accounting, etc.)
 5. Planning (Agile, Blogging, Career Planning, etc.)
+
+### Development
