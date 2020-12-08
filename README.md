@@ -1,7 +1,7 @@
 # Time_Management
 track my hours spent in different categories
 
-[current_progress](time_sheet.png)
+![current_progress](time_sheet.png)
 
 ### Categories
 1. Work Coding and Analysis
