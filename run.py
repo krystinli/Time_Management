@@ -1,5 +1,5 @@
 import pandas as pd
-import datetime
+from datetime import date,timedelta
 import matplotlib.pyplot as plt
 
 def import_data():
@@ -9,7 +9,7 @@ def import_data():
     data = pd.read_csv("data/time_sheet.csv")
     print("Refresh starting ...")
     print("The current time sheet has %d rows." % len(data))
-    print(input_data.tail(5))
+    print(data.tail(5))
     return data 
 
 def insert_new_row(lst, data):
@@ -72,7 +72,11 @@ def main():
     
     # 2) add new data
 #     input_data = insert_new_row(
-#         ["2020-12-28", 0, 0, 0, 0], # work, ds_proj, coding, planning 
+#         ["2020-12-28", 
+#          0, # work
+#          2.5, # ds_project
+#          0, # coding
+#          1.5], # planning 
 #         input_data,)
     
     # input_data.loc[data["Date"] == "2020-12-07", "work"] = 5 # update data
@@ -81,6 +85,7 @@ def main():
     data = transform_data(input_data)
     
     # 4) create plot 
+    data = data[data.index >= pd.to_datetime(date.today() - timedelta(days=30))] # recent month
     plot_static(data, "Total", "blue")
     plot_static(data, "coding", "red")
     plot_static(data, "ds_project", "yellow")
