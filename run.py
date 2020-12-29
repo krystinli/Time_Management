@@ -1,18 +1,21 @@
 import pandas as pd
 import datetime
-
 import matplotlib.pyplot as plt
-from matplotlib.pyplot import figure
-import matplotlib.dates as mdates
-
 
 def import_data():
+    """
+    read data from csv
+    """
     data = pd.read_csv("data/time_sheet.csv")
     print("Refresh starting ...")
     print("The current time sheet has %d rows." % len(data))
+    print(input_data.tail(5))
     return data 
-    
+
 def insert_new_row(lst, data):
+    """
+    append new row to existing dataframe
+    """
     data = data.append(
     {
         "Date" : lst[0],
@@ -24,50 +27,69 @@ def insert_new_row(lst, data):
     }, ignore_index=True,)
     return data 
 
+def transform_data(input_data):
+    """
+    create "Total" column
+    save to csv
+    set "Date" as index column
+    """
+    input_data["Total"] = input_data["work"] + input_data["ds_project"] + input_data["coding"] + input_data["planning"] 
+    input_data.to_csv("data/time_sheet.csv", index=False)
+    
+    input_data.index = pd.to_datetime(input_data.Date) # set date as index
+    input_data.sort_index(inplace=True)
+    input_data.drop('Date', axis=1, inplace=True)
+    print("After tranformed:", input_data.tail(5))
+    return input_data
+
+def plot_static(data, colname, color):
+    """
+    plot column 
+    save it under img/
+    """
+    fig, ax = plt.subplots()
+    fig.set_size_inches(18, 5) # img size
+    
+    ax.plot(colname, 
+        data = data, 
+        color = "black", 
+        linewidth = 1, 
+        marker = 'o', 
+        markeredgecolor = color,
+        markersize = 3,)
+
+    ax.set(xlabel = "Date", 
+           ylabel = "Hours", 
+           title = colname)
+    plt.legend()
+    plt.savefig("img/" + colname + ".png") 
+    print("Generated plot for", colname)
+
 def main():
     
     # 1) read data
     input_data = import_data() 
-    print(input_data.tail(5))
     
     # 2) add new data
 #     input_data = insert_new_row(
-#         ["2020-12-11", 5.5, 0, 0, 0], # work, ds_proj, coding, planning 
+#         ["2020-12-28", 0, 0, 0, 0], # work, ds_proj, coding, planning 
 #         input_data,)
     
-    # 2) update data
-#     input_data.loc[data["Date"] == "2020-12-07", "work"] = 5
+    # input_data.loc[data["Date"] == "2020-12-07", "work"] = 5 # update data
 
-    print(input_data.tail(5))
-
-    # 3) save data 
-    input_data["Total"] = input_data["work"] + input_data["ds_project"] + input_data["coding"] + input_data["planning"] 
-    print(input_data.tail(5))
-    input_data.to_csv("data/time_sheet.csv", index=False)
+    # 3) data transformation
+    data = transform_data(input_data)
     
     # 4) create plot 
-    data = input_data.copy()
+    plot_static(data, "Total", "blue")
+    plot_static(data, "coding", "red")
+    plot_static(data, "ds_project", "yellow")
+    plot_static(data, "planning", "purple")
+    plot_static(data, "work", "green")
     
-    # Initiate the plot 
-    fig, ax = plt.subplots()
-    ax.plot("Date", "ds_project", data=data)
-    ax.plot("Date", "work", data=data)
-    ax.plot("Date", "coding", data=data)
-    ax.plot("Date", "planning", data=data)
-    ax.plot("Date", "Total", data=data)
-
-    # labels and legend 
-    ax.set(xlabel='Date', ylabel='Hours', title='Productivity')
-    plt.legend()
-
-    # rotate x-axis and set max num of ticks displayed 
-    plt.xticks(data.index, rotation=50)
-    ax.xaxis.set_major_locator(plt.MaxNLocator(20)) 
-
-    # resize img 
-    fig.set_size_inches(18, 5)
-    plt.savefig('time_sheet.png')
-    
-
 if __name__ == "__main__":
     main()
+
+
+
+    
