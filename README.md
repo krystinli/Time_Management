@@ -1,5 +1,5 @@
 # Time_Management
-This repo is designed to track my hours spent in different categories of development. It's updated every morning :sun:.
+This repo is designed to track my hours spent in different categories of development. It's updated every morning :sunny:.
 
 ### Categories
 1. `work` Work Coding and Analysis
