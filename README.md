@@ -6,7 +6,7 @@ This repo is designed to track my hours spent in different categories of develop
 1. `work` Work Coding and Analysis
 2. `ds_project` DS side Project or Medium blogging
 3. `coding` Coding Exercise (like Leetcode, Hackerank, etc.) or Theory Based Reading
-4. `planning` Agile, Finance, Career Planning, Finance, Home Improvement, etc.  
+4. `planning` Agile, Finance, Career Planning, Home Improvement, etc.  
 
 ### Work :alarm_clock:
 ![work](https://github.com/krystinli/Time_Management/blob/main/img/work.png)
