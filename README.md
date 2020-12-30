@@ -21,7 +21,10 @@ This repo is designed to track my hours spent in different categories of develop
 ![planning](https://github.com/krystinli/Time_Management/blob/main/img/planning.png)
 
 ## Summary Plots
-These plots show some other metrics and additional cumulative view of above graphs. 
+These plots show some other metrics including:
+- Additional summary view
+- Result of the time spent (ie. Leetcode Questions Completed)
+- Long term view of the above plots 
 
 ### Total :zap:
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/Total.png)
