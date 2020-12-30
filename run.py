@@ -71,13 +71,13 @@ def main():
     input_data = import_data() 
     
     # 2) add new data
-#     input_data = insert_new_row(
-#         ["2020-12-28", 
-#          0, # work
-#          2.5, # ds_project
-#          0, # coding
-#          1.5], # planning 
-#         input_data,)
+    input_data = insert_new_row(
+        ["2020-12-29", 
+         9, # work
+         0, # ds_project
+         0, # coding
+         0], # planning 
+        input_data,)
     
     # input_data.loc[data["Date"] == "2020-12-07", "work"] = 5 # update data
 
