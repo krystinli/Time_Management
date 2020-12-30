@@ -7,17 +7,17 @@ This repo is designed to track my hours spent in different categories of develop
 3. `coding` Coding Exercise (like Leetcode, Hackerank, etc.) or Theory Based Reading
 4. `planning` Agile, Finance, Career Planning, etc.  
 
-### Work
+### Work :alarm_clock:
 ![work](https://github.com/krystinli/Time_Management/blob/main/img/work.png)
 
-### DS_Project
+### DS_Project :bar_chart:
 ![ds_project](https://github.com/krystinli/Time_Management/blob/main/img/ds_project.png)
 
-### Coding
+### Coding :computer:
 ![coding](https://github.com/krystinli/Time_Management/blob/main/img/coding.png)
 
-### Planning
+### Planning :pencil:
 ![planning](https://github.com/krystinli/Time_Management/blob/main/img/planning.png)
 
-### Total
+### Total :zap:
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/Total.png)
