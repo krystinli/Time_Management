@@ -46,7 +46,7 @@ def transform_data(input_data):
     return input_data
 
 
-def plot_static(data, colname, color):
+def plot_static(data, colname, color, target):
     """
     plot column 
     save it under img/
@@ -65,7 +65,11 @@ def plot_static(data, colname, color):
     ax.set(xlabel = "Date", 
            ylabel = "Hours", 
            title = colname)
+    
+    # target line 
+    plt.axhline(y=target, color='r', linestyle='dashed')
     plt.legend()
+    
     plt.savefig("img/" + colname + ".png") 
     print("Generated plot for", colname)
 
@@ -100,13 +104,13 @@ def main():
     input_data = import_data() 
     
     # 2) add new data
-    input_data = insert_new_row(
-        ["2020-12-29", 
-         9, # work
-         0, # ds_project
-         0, # coding
-         0], # planning 
-        input_data,)
+#     input_data = insert_new_row(
+#         ["2020-12-29", 
+#          9, # work
+#          0, # ds_project
+#          0, # coding
+#          0], # planning 
+#         input_data,)
     
     # input_data.loc[data["Date"] == "2020-12-07", "work"] = 5 # update data
 
@@ -115,11 +119,11 @@ def main():
     
     # 4) create plot 
     data = data[data.index >= pd.to_datetime(date.today() - timedelta(days=30))] # recent month
-    plot_static(data, "Total", "blue")
-    plot_static(data, "coding", "red")
-    plot_static(data, "ds_project", "yellow")
-    plot_static(data, "planning", "purple")
-    plot_static(data, "work", "green")
+    plot_static(data, "Total", "blue", 10)
+    plot_static(data, "coding", "red", 0.5)
+    plot_static(data, "ds_project", "yellow", 2)
+    plot_static(data, "planning", "purple", 0.5)
+    plot_static(data, "work", "green", 6)
     
     # 5) leetcode plot
 #     plot_leetcode() # only run at month end to refresh leetcode plot
