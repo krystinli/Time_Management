@@ -20,5 +20,10 @@ This repo is designed to track my hours spent in different categories of develop
 ### Planning :pencil:
 ![planning](https://github.com/krystinli/Time_Management/blob/main/img/planning.png)
 
+----------------
+
 ### Total :zap:
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/Total.png)
+
+### Leetcode
+![leetcode](https://github.com/krystinli/Time_Management/blob/main/img/leetcode.png)
