@@ -1,8 +1,9 @@
 # Time_Management
 This repo is designed to track my hours spent in different categories of development. It's updated every morning :sunny:.
 - Plots show the past 30 days trend;
+- Some plots are updated daily, some monthly;
 
-### Categories
+## 01_Categories
 1. `work` Work Coding and Analysis
 2. `ds_project` DS side Project or Medium blogging
 3. `coding` Coding Exercise (like Leetcode, Hackerank, etc.) or Theory Based Reading
@@ -20,7 +21,11 @@ This repo is designed to track my hours spent in different categories of develop
 ### Planning :pencil:
 ![planning](https://github.com/krystinli/Time_Management/blob/main/img/planning.png)
 
-----------------
+## 02_Summary_Plots
+These plots show some other metrics including:
+- Additional summary view
+- Result of the time spent (ie. Leetcode Questions Completed)
+- Long term view of the above plots 
 
 ### Total :zap:
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/Total.png)
