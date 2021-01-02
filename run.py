@@ -80,7 +80,7 @@ def plot_leetcode():
     save it under img/
     """
     x = ["2020-11", "2020-12", "2021-01", "2021-02", "2021-03",]
-    y = [18, 23, 0, 0, 0]
+    y = [18, 28, 0, 0, 0]
 
     fig, ax = plt.subplots()
     fig.set_size_inches(18, 5) # img size
@@ -105,11 +105,11 @@ def main():
     
     # 2) add new data
     input_data = insert_new_row(
-        ["2020-12-30", 
-         1, # work
-         1, # ds_project
-         2, # coding
-         0.5], # planning 
+        ["2021-01-01", 
+         0, # work
+         0, # ds_project
+         0, # coding
+         0], # planning 
         input_data,)
     
     # input_data.loc[data["Date"] == "2020-12-07", "work"] = 5 # update data
@@ -119,9 +119,9 @@ def main():
     
     # 4) create plot 
     data = data[data.index >= pd.to_datetime(date.today() - timedelta(days=30))] # recent month
-    plot_static(data, "Total", "blue", 10)
+    plot_static(data, "Total", "blue", 8)
     plot_static(data, "coding", "red", 0.5)
-    plot_static(data, "ds_project", "yellow", 2)
+    plot_static(data, "ds_project", "yellow", 1)
     plot_static(data, "planning", "purple", 0.5)
     plot_static(data, "work", "green", 6)
     
