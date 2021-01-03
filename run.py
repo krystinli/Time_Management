@@ -79,8 +79,9 @@ def plot_leetcode():
     plot leetcode progress 
     save it under img/
     """
-    x = ["2020-11", "2020-12", "2021-01", "2021-02", "2021-03",]
-    y = [18, 28, 0, 0, 0]
+    x = ["2020-12", "2021-01", "2021-02", "2021-03",]
+    z = [27, 0, 0, 0] # total by month end
+    y = [9, 0, 0, 0] # difference
 
     fig, ax = plt.subplots()
     fig.set_size_inches(18, 5) # img size
@@ -92,7 +93,7 @@ def plot_leetcode():
 
     ax.set(xlabel = "Month", 
            ylabel = "Number of Questions", 
-           title = "Leetcode Questions completed accumulative",)
+           title = "Leetcode Questions completed",)
     
     plt.savefig("img/" + "leetcode" + ".png") 
     print("Generated plot for leetcode.")    
@@ -105,10 +106,10 @@ def main():
     
     # 2) add new data
     input_data = insert_new_row(
-        ["2021-01-01", 
+        ["2021-01-02", 
          0, # work
          0, # ds_project
-         0, # coding
+         1.5, # coding
          0], # planning 
         input_data,)
     
