@@ -80,8 +80,8 @@ def plot_leetcode():
     save it under img/
     """
     x = ["2020-12", "2021-01", "2021-02", "2021-03",]
-    z = [27, 0, 0, 0] # total by month end
-    y = [9, 0, 0, 0] # difference
+    z = [27, 29, 0, 0] # total by month end
+    y = [9, 2, 0, 0] # difference
 
     fig, ax = plt.subplots()
     fig.set_size_inches(18, 5) # img size
@@ -106,10 +106,10 @@ def main():
     
     # 2) add new data
     input_data = insert_new_row(
-        ["2021-01-02", 
+        ["2021-01-03", 
          0, # work
          0, # ds_project
-         1.5, # coding
+         0, # coding
          0], # planning 
         input_data,)
     
