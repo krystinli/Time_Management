@@ -106,28 +106,23 @@ def main():
     
     # 2) add new data
     input_data = insert_new_row(
-        ["2021-01-04", 
-         7, # work
-         0, # ds_project
-         0, # coding
-         0], # planning 
-        input_data,)
-
-    input_data = insert_new_row(
-        ["2021-01-04", 
-         5.5, # work
+        ["2021-01-12", 
+         0, # work
          0, # ds_project
          0, # coding
          0], # planning 
         input_data,)
     
-    # input_data.loc[data["Date"] == "2020-12-07", "work"] = 5 # update data
+#     input_data.loc[
+#         (input_data["Date"] == "2021-01-05") & (input_data["ds_project"] == 0), 
+#     "ds_project"] = 1 # update col
 
     # 3) data transformation
     data = transform_data(input_data)
     
     # 4) create plot 
-    data = data[data.index >= pd.to_datetime(date.today() - timedelta(days=30))] # recent month
+    data = data[data.index >= pd.to_datetime(date.today() - timedelta(days=15))] # biweekly
+    
     plot_static(data, "Total", "blue", 8)
     plot_static(data, "coding", "red", 0.5)
     plot_static(data, "ds_project", "yellow", 1)
