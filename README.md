@@ -27,5 +27,6 @@ This repo is designed to track my hours spent in different categories of develop
 ### Coding :computer:
 ![coding](https://github.com/krystinli/Time_Management/blob/main/img/coding.png)
 
-### Planning :pencil:
+### Project :pencil:
+DS project and financial planning combined
 ![planning](https://github.com/krystinli/Time_Management/blob/main/img/project.png)
