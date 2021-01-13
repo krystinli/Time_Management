@@ -118,9 +118,9 @@ def main():
 #          0], # planning 
 #         input_data,)
     
-#     input_data.loc[
-#         (input_data["Date"] == "2021-01-05") & (input_data["ds_project"] == 0), 
-#     "ds_project"] = 1 # update col
+    input_data.loc[
+        (input_data["Date"] == "2021-01-12"), 
+    "ds_project"] = 0.75 # update col
 
     # 3) data transformation
     data = transform_data(input_data)
@@ -132,8 +132,8 @@ def main():
     # short term view 
     plot_static(data_short, "Total", "blue", 5, 7, "Total",)
     plot_static(data_short, "coding", "red", 0.25, 0.5, "coding")
-    plot_static(data_short, "Project", "purple", 0.25, 0.5, "project")
     plot_static(data_short, "work", "green", 4, 5, "work")
+    plot_static(data_short, "Project", "purple", 0.5, 1, "project")
     
     # long term view
     plot_static(data_long, "Total", "yellow", 5, 7, "Total_60days")
