@@ -46,7 +46,7 @@ def transform_data(input_data):
     return input_data
 
 
-def plot_static(data, colname, color, target):
+def plot_static(data, colname, color, target, img_name):
     """
     plot column 
     save it under img/
@@ -70,7 +70,7 @@ def plot_static(data, colname, color, target):
     plt.axhline(y=target, color='r', linestyle='dashed')
     plt.legend()
     
-    plt.savefig("img/" + colname + ".png") 
+    plt.savefig("img/" + img_name + ".png") 
     print("Generated plot for", colname)
 
     
@@ -105,13 +105,13 @@ def main():
     input_data = import_data() 
     
     # 2) add new data
-    input_data = insert_new_row(
-        ["2021-01-12", 
-         0, # work
-         0, # ds_project
-         0, # coding
-         0], # planning 
-        input_data,)
+#     input_data = insert_new_row(
+#         ["2021-01-12", 
+#          4.5, # work
+#          0.5, # ds_project
+#          0, # coding
+#          0], # planning 
+#         input_data,)
     
 #     input_data.loc[
 #         (input_data["Date"] == "2021-01-05") & (input_data["ds_project"] == 0), 
@@ -121,13 +121,18 @@ def main():
     data = transform_data(input_data)
     
     # 4) create plot 
-    data = data[data.index >= pd.to_datetime(date.today() - timedelta(days=15))] # biweekly
+    data = data[data.index >= pd.to_datetime(date.today() - timedelta(days=10))] # 10 days
+    data_long = data[data.index >= pd.to_datetime(date.today() - timedelta(days=60))] # 60 days 
     
-    plot_static(data, "Total", "blue", 8)
-    plot_static(data, "coding", "red", 0.5)
-    plot_static(data, "ds_project", "yellow", 1)
-    plot_static(data, "planning", "purple", 0.5)
-    plot_static(data, "work", "green", 6)
+    # short term view 
+    plot_static(data, "Total", "blue", 7, "Total",)
+    plot_static(data, "coding", "red", 0.5, "coding")
+    plot_static(data, "ds_project", "yellow", 0.5, "ds_project")
+    plot_static(data, "planning", "purple", 0.5, "planning")
+    plot_static(data, "work", "green", 5, "work")
+    
+    # long term view
+    plot_static(data_long, "Total", "blue", 7, "Total_60days")
     
     # 5) leetcode plot
 #     plot_leetcode() # only run at month end to refresh leetcode plot
