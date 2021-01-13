@@ -3,13 +3,14 @@ This repo is designed to track my hours spent in different categories of develop
 - Plots show the past 2-weeks summary and bi-monthly trend;
 - Some plots are updated daily, some less frequent;
 
-## 00_Summary_Plots
-These plots show high level summary:
-- Summary views
-- Result of the time spent (ie. Leetcode Questions Completed)
+## 00_Summary
 
 ### Total :zap:
+**10 Days**
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/Total.png)
+
+**60 Days** 
+![total](https://github.com/krystinli/Time_Management/blob/main/img/img/Total_60days.png)
 
 ### Leetcode
 ![leetcode](https://github.com/krystinli/Time_Management/blob/main/img/leetcode.png)
