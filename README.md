@@ -24,11 +24,8 @@ This repo is designed to track my hours spent in different categories of develop
 ### Work :alarm_clock:
 ![work](https://github.com/krystinli/Time_Management/blob/main/img/work.png)
 
-### DS_Project :bar_chart:
-![ds_project](https://github.com/krystinli/Time_Management/blob/main/img/ds_project.png)
-
 ### Coding :computer:
 ![coding](https://github.com/krystinli/Time_Management/blob/main/img/coding.png)
 
 ### Planning :pencil:
-![planning](https://github.com/krystinli/Time_Management/blob/main/img/planning.png)
+![planning](https://github.com/krystinli/Time_Management/blob/main/img/project.png)
