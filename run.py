@@ -39,6 +39,10 @@ def transform_data(input_data):
     input_data["Total"] = input_data["work"] + input_data["ds_project"] + input_data["coding"] + input_data["planning"] 
     input_data.to_csv("data/time_sheet.csv", index=False)
     
+    # combine ds_project and planning
+    input_data["Project"] = input_data["ds_project"] + input_data["planning"]
+    
+    
     input_data.index = pd.to_datetime(input_data.Date) # set date as index
     input_data.sort_index(inplace=True)
     input_data.drop('Date', axis=1, inplace=True)
@@ -46,7 +50,7 @@ def transform_data(input_data):
     return input_data
 
 
-def plot_static(data, colname, color, target, img_name):
+def plot_static(data, colname, color, target_low, target_high, img_name):
     """
     plot column 
     save it under img/
@@ -67,7 +71,8 @@ def plot_static(data, colname, color, target, img_name):
            title = colname)
     
     # target line 
-    plt.axhline(y=target, color='r', linestyle='dashed')
+    plt.axhline(y=target_low, color='r', linestyle='dashed')
+    plt.axhline(y=target_high, color='g', linestyle='dashed')
     plt.legend()
     
     plt.savefig("img/" + img_name + ".png") 
@@ -121,18 +126,17 @@ def main():
     data = transform_data(input_data)
     
     # 4) create plot 
-    data = data[data.index >= pd.to_datetime(date.today() - timedelta(days=10))] # 10 days
-    data_long = data[data.index >= pd.to_datetime(date.today() - timedelta(days=60))] # 60 days 
+    data_short = data[data.index >= pd.to_datetime(date.today() - timedelta(days=10))].copy() # 10 days
+    data_long = data[data.index >= pd.to_datetime(date.today() - timedelta(days=60))].copy() # 60 days 
     
     # short term view 
-    plot_static(data, "Total", "blue", 7, "Total",)
-    plot_static(data, "coding", "red", 0.5, "coding")
-    plot_static(data, "ds_project", "yellow", 0.5, "ds_project")
-    plot_static(data, "planning", "purple", 0.5, "planning")
-    plot_static(data, "work", "green", 5, "work")
+    plot_static(data_short, "Total", "blue", 5, 7, "Total",)
+    plot_static(data_short, "coding", "red", 0.25, 0.5, "coding")
+    plot_static(data_short, "Project", "purple", 0.25, 0.5, "project")
+    plot_static(data_short, "work", "green", 4, 5, "work")
     
     # long term view
-    plot_static(data_long, "Total", "blue", 7, "Total_60days")
+    plot_static(data_long, "Total", "yellow", 5, 7, "Total_60days")
     
     # 5) leetcode plot
 #     plot_leetcode() # only run at month end to refresh leetcode plot
