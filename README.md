@@ -5,12 +5,11 @@ This repo is designed to track my hours spent in different categories of develop
 
 ## 00_Summary
 
-### Total :zap:
 **10 Days**
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/Total.png)
 
 **60 Days** 
-![total](https://github.com/krystinli/Time_Management/blob/main/img/img/Total_60days.png)
+![total](https://github.com/krystinli/Time_Management/blob/main/img/Total_60days.png)
 
 ### Leetcode
 ![leetcode](https://github.com/krystinli/Time_Management/blob/main/img/leetcode.png)
