@@ -8,6 +8,7 @@ This part track the total time spent in development: the first plot is **Past 10
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/Total_60days.png)
 
 ### Leetcode
+Time investment is an early indicator, where # of leetcode completed is a reflection/result of the time investment (in coding).
 ![leetcode](https://github.com/krystinli/Time_Management/blob/main/img/leetcode.png)
 
 
