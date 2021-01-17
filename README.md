@@ -1,10 +1,8 @@
 # Time_Management
-This repo is designed to track my hours spent in different categories of development. It's updated every morning :sunny:.
-- Plots show the past 2-weeks summary and bi-monthly trend;
-- Some plots are updated daily, some less frequent;
+This repo is designed to track my hours spent in different categories of development. I believe the prerequisite of development is tracking time management - you need to have a clear picture on the time investment in activities in order to motivate yourself to improve.
 
 ## 00_Summary
-
+This part track the total time spent in development: the first plot is **Past 10 Days** and second plot is **Past 60 Days**.
 **10 Days**
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/Total.png)
 
