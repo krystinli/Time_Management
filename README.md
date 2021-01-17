@@ -2,7 +2,7 @@
 This repo is designed to track my hours spent in different categories of development. I believe the prerequisite of development is tracking time management - you need to have a clear picture on the time investment in activities in order to motivate yourself to improve.
 
 ## 00_Summary
-This part track the total time spent in development: the first plot is **Past 10 Days** and second plot is **Past 60 Days**.
+This section tracks the total time spent in development: the first plot is **Past 10 Days** and second plot is **Past 60 Days**.
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/Total.png)
 
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/Total_60days.png)
@@ -13,6 +13,7 @@ Time investment is an early indicator, where # of leetcode completed is a reflec
 
 
 ## 01_Categories
+Development is broken down into 4 categories: (in the plot 2 and 4 are combined)
 1. `work` Work Coding and Analysis
 2. `ds_project` DS side Project or Medium blogging
 3. `coding` Coding Exercise (like Leetcode, Hackerank, etc.) or Theory Based Reading
