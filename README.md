@@ -3,10 +3,8 @@ This repo is designed to track my hours spent in different categories of develop
 
 ## 00_Summary
 This part track the total time spent in development: the first plot is **Past 10 Days** and second plot is **Past 60 Days**.
-**10 Days**
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/Total.png)
 
-**60 Days** 
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/Total_60days.png)
 
 ### Leetcode
