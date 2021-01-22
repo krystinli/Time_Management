@@ -2,9 +2,15 @@
 This repo is designed to track my hours spent in different categories of development. I believe the prerequisite of development is tracking time management - you need to have a clear picture on the time investment in activities in order to motivate yourself to improve. [goal](https://github.com/krystinli/Inner_Space/blob/master/Timeline/2021-01-17_%E2%80%9C%E6%BC%94%E5%91%98%E2%80%9D%E7%9A%84%E8%AF%9E%E7%94%9F.md#%E7%AC%AC%E4%B8%80%E6%AD%A513%E6%9C%88)
 
 ## 00_Summary
-This section tracks the total time spent in development: the first plot is **Past 10 Days** and second plot is **Past 60 Days**.
+This section tracks the total time spent in development: 
+
+### Past 10 Days
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/Total.png)
 
+### Past 30 Days
+![total](https://github.com/krystinli/Time_Management/blob/main/img/Total_30days.png)
+
+### Past 60 Days
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/Total_60days.png)
 
 ### Leetcode
