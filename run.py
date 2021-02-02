@@ -111,19 +111,11 @@ def main():
     
     # 2) add new data
     input_data = insert_new_row(
-        ["2021-01-30", 
-         1, # work
-         0.5, # ds_project
-         0, # coding
-         0], # planning 
-        input_data,)
-
-    input_data = insert_new_row(
-        ["2021-01-31", 
-         0, # work
+        ["2021-02-01", 
+         5, # work
          0, # ds_project
-         0, # coding
-         0], # planning 
+         0.5, # coding
+         1.5], # planning 
         input_data,)
     
 #     input_data.loc[
