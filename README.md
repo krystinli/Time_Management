@@ -5,7 +5,7 @@ This repo is designed to track my hours spent in different categories of develop
 This section tracks the total time spent in development: 
 
 ### Past 10 Days
-![total](https://github.com/krystinli/Time_Management/blob/main/img/Total.png)
+![total](https://github.com/krystinli/Time_Management/blob/main/img/Total_10days.png)
 
 ### Past 30 Days
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/Total_30days.png)
