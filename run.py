@@ -111,23 +111,23 @@ def main():
     
     # 2) add new data    
     input_data = insert_new_row(
-        ["2021-03-15", 
-         6.5, # work
+        ["2021-03-23", 
+         5.5, # work
          0, # ds_project
          0, # coding
          0], # planning 
         input_data,)
 
     input_data = insert_new_row(
-        ["2021-03-16", 
-         2.5, # work
+        ["2021-03-24", 
+         7.5, # work
          0, # ds_project
          0, # coding
          0], # planning 
         input_data,)
   
     input_data = insert_new_row(
-        ["2021-03-17", 
+        ["2021-03-25", 
          3, # work
          0, # ds_project
          0, # coding
@@ -135,44 +135,44 @@ def main():
         input_data,)
     
     input_data = insert_new_row(
-        ["2021-03-18", 
-         2.5, # work
+        ["2021-03-26", 
+         3.5, # work
          0, # ds_project
          0, # coding
          0], # planning 
         input_data,)
 
     input_data = insert_new_row(
-        ["2021-03-19", 
-         2, # work
+        ["2021-03-27", 
+         0, # work
          0, # ds_project
          0, # coding
          0], # planning 
         input_data,)
  
     input_data = insert_new_row(
-        ["2021-03-20", 
+        ["2021-03-28", 
          0, # work
          0, # ds_project
          0, # coding
-         0], # planning 
+         1], # planning 
         input_data,)
 
     
     input_data = insert_new_row(
-        ["2021-03-21", 
-         1, # work
+        ["2021-03-29", 
+         3.5, # work
          0, # ds_project
          0, # coding
          0], # planning 
         input_data,)
 
     input_data = insert_new_row(
-        ["2021-03-22", 
-         4, # work
+        ["2021-03-30", 
+         6, # work
          0, # ds_project
          0, # coding
-         0], # planning 
+         0.5], # planning 
         input_data,)
     
 #     input_data.loc[
