@@ -7,7 +7,7 @@ Development is broken down into 4 categories: (in the plot 2 and 4 are combined)
 2. `Development` DS side Project or Medium blogging
 3. `Self-Care` 
 
-### Work 🖱️
+### Work 🧑‍🔬
 ![work](https://github.com/krystinli/Time_Management/blob/main/img/work_plot.png)
 
 ### Development 🌳
