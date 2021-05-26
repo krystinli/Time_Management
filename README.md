@@ -3,6 +3,8 @@ This repo is designed to track hours spent in 3 important areas: **work, develop
 
 ![img](https://getlighthouse.com/blog/wp-content/uploads/2016/03/dilbert_career_path.png)
 
+----------
+
 ### Work 🧑‍🔬 - Working Codings and Analysis
 ![work](https://github.com/krystinli/Time_Management/blob/main/img/work_plot.png)
 
