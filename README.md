@@ -15,4 +15,4 @@ DS project and financial planning combined
 Time investment is an early indicator, where # of leetcode completed is a reflection/result of the time investment (in coding).
 ![leetcode](https://github.com/krystinli/Time_Management/blob/main/img/leetcode.png)
 
-![img](https://www.google.com/url?sa=i&url=https%3A%2F%2Fgetlighthouse.com%2Fblog%2Fhow-employees-career-growth%2F&psig=AOvVaw1hftfLjaLFqlwL0FvV8DIZ&ust=1622087071455000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCODu0rG35vACFQAAAAAdAAAAABAD)
+![img](https://getlighthouse.com/blog/wp-content/uploads/2016/03/dilbert_career_path.png)
