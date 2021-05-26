@@ -18,7 +18,7 @@ def transform_data(data, days_count):
 def plot_static(data, colname, color, target_low, target_high, img_name):
     """
     plot column
-    save it under img/
+    save it under img
     """
     fig, ax = plt.subplots()
     fig.set_size_inches(18, 5) # img size

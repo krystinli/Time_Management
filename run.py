@@ -21,7 +21,7 @@ def import_data():
     today = date.today()
     print("You have %d missing days." % ((today - max_date).days))
 
-    while max_date < today:
+    while max_date <= today:
         max_date = max_date + timedelta(days=1)
         data = data.append(
         {
@@ -42,7 +42,6 @@ def main():
     # 1) read and transform data
     input_data = import_data()
     clean_data = transform_data(input_data, 30)
-    clean_data
 
     # 2) plotting
     plot_static(clean_data, "Work", "blue", 3, 6, "work_plot")
