@@ -12,7 +12,7 @@ Personal projects and time spent on learnings (outside of work) 📚
 ![coding](https://github.com/krystinli/Time_Management/blob/main/img/dev_plot.png)
 
 ### Self-Care 💟 - Prioritize my well-being
-Exercising, financial planning, managing my house 💰
+Exercising, meditation, financial planning, etc.💰 🏡 🏃‍♀️
 ![planning](https://github.com/krystinli/Time_Management/blob/main/img/care_plot.png)
 
 ### Leetcode
