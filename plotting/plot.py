@@ -43,26 +43,26 @@ def plot_static(data, colname, color, target_low, target_high, img_name):
     plt.savefig("img/" + img_name + ".png")
     print("Generated plot for", colname)
 
-# def plot_leetcode():
-#     """
-#     plot leetcode progress
-#     save it under img/
-#     """
-#     x = ["2020-12", "2021-01", "2021-02", "2021-03",]
-#     z = [27, 29, 0, 0] # total by month end
-#     y = [9, 2, 0, 0] # difference
-#
-#     fig, ax = plt.subplots()
-#     fig.set_size_inches(18, 5) # img size
-#
-#     plt.bar(x, y,
-#             color="pink",
-#             edgecolor="yellow",
-#             linewidth=2,)
-#
-#     ax.set(xlabel = "Month",
-#            ylabel = "Number of Questions",
-#            title = "Leetcode Questions completed",)
-#
-#     plt.savefig("img/" + "leetcode" + ".png")
-#     print("Generated plot for leetcode.")
+def plot_leetcode():
+    """
+    plot leetcode progress
+    save it under img/
+    """
+    x = ["2020-12", "2021-01", "2021-02", "2021-03",]
+    z = [27, 29, 0, 0] # total by month end
+    y = [9, 2, 0, 0] # difference
+
+    fig, ax = plt.subplots()
+    fig.set_size_inches(18, 5) # img size
+
+    plt.bar(x, y,
+            color="pink",
+            edgecolor="yellow",
+            linewidth=2,)
+
+    ax.set(xlabel = "Month",
+           ylabel = "Number of Questions",
+           title = "Leetcode Questions completed",)
+
+    plt.savefig("img/" + "leetcode" + ".png")
+    print("Generated plot for leetcode.")
