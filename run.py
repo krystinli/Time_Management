@@ -38,15 +38,14 @@ def import_data():
     return data
 
 def main():
-
     # 1) read and transform data
     input_data = import_data()
     clean_data = transform_data(input_data, 30)
 
-    # 2) plotting
-    plot_static(clean_data, "Work", "blue", 3, 6, "work_plot")
-    plot_static(clean_data, "Development", "red", 0.5, 2, "dev_plot")
-    plot_static(clean_data, "Self-Care", "green", 0, 3, "care_plot")
+    # 2) plotting performance
+    plot_static(clean_data, "Work_Scaled", "blue", "work_plot")
+    plot_static(clean_data, "Dev_Scaled", "red", "dev_plot")
+    plot_static(clean_data, "Care_Scaled", "green", "care_plot")
 
     # 5) leetcode plot
 #     plot_leetcode() # only run at month end to refresh leetcode plot

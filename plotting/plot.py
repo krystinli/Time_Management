@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 from datetime import date, timedelta, datetime
 
@@ -7,7 +8,36 @@ def transform_data(data, days_count):
     """
     set "Date" as index column
     cut date into relevant range
+    Transform the Y-axis value from hours to performance
+
+    performance = expected hours - actual hours
+
+    weekday expecation:
+        work = 4 hr
+        development = 0.5 hr
+        self-care = 0.5 hr
+
+    weekend expecation:
+        work = 1 hr
+        development = 1 hr
+        self-care = 1 hr
     """
+    # transform y-axis from hours to performance
+    data["Work_Scaled"] = np.where(
+        (data["Day"]=="Saturday") | (data["Day"]=="Sunday"),
+        data["Work"] - 1,
+        data["Work"] - 4,)
+
+    data["Dev_Scaled"] = np.where(
+        (data["Day"]=="Saturday") | (data["Day"]=="Sunday"),
+        data["Development"] - 1,
+        data["Development"] - 0.5,)
+
+    data["Care_Scaled"] = np.where(
+        (data["Day"]=="Saturday") | (data["Day"]=="Sunday"),
+        data["Self-Care"] - 1,
+        data["Self-Care"] - 0.5,)
+
     last_month = date.today() - timedelta(days=days_count)
     data = data[data.Date >= last_month.strftime("%Y-%m-%d")]
 
@@ -15,7 +45,14 @@ def transform_data(data, days_count):
     data.set_index("Date", inplace=True)
     return data.sort_index()
 
-def plot_static(data, colname, color, target_low, target_high, img_name):
+def plot_static(
+        data,
+        colname,
+        color,
+        img_name,
+        target_low=0,
+        target_high=0
+    ):
     """
     plot column
     save it under img
@@ -32,12 +69,13 @@ def plot_static(data, colname, color, target_low, target_high, img_name):
         markersize = 5,)
 
     ax.set(xlabel = "Date",
-           ylabel = "Hours",
+           ylabel = "Performance",
            title = colname)
 
     # target line
-    plt.axhline(y=target_low, color='r', linestyle='dashed')
-    plt.axhline(y=target_high, color='g', linestyle='dashed')
+    # plt.axhline(y=target_low, c='r', linestyle='--')
+    plt.axhline(y=0, c='black', linestyle='--', linewidth=2)
+    # plt.axhline(y=target_high, c='g', linestyle='--')
     plt.legend()
 
     plt.savefig("img/" + img_name + ".png")
