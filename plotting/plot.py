@@ -4,7 +4,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 from datetime import date, timedelta, datetime
 
-def transform_data(data, days_count):
+def transform_data(
+    data,
+    days_count=30,
+    # current benchmark setting
+    weekday_work_exp=3,
+    weekend_work_exp=0.5,
+    weekday_dev_exp=0.25,
+    weekend_dev_exp=0.5,
+    ):
     """
     set "Date" as index column
     cut date into relevant range
@@ -25,22 +33,24 @@ def transform_data(data, days_count):
     # transform y-axis from hours to performance
     data["Work_Scaled"] = np.where(
         (data["Day"]=="Saturday") | (data["Day"]=="Sunday"),
-        data["Work"] - 1,
-        data["Work"] - 4,)
+        data["Work"] - weekend_work_exp,
+        data["Work"] - weekday_work_exp,)
 
     data["Dev_Scaled"] = np.where(
         (data["Day"]=="Saturday") | (data["Day"]=="Sunday"),
-        data["Development"] - 1,
-        data["Development"] - 0.5,)
+        data["Development"] - weekend_dev_exp,
+        data["Development"] - weekday_dev_exp,)
 
     data["Care_Scaled"] = np.where(
         (data["Day"]=="Saturday") | (data["Day"]=="Sunday"),
-        data["Self-Care"] - 1,
-        data["Self-Care"] - 0.5,)
+        data["Self-Care"] - weekend_dev_exp,
+        data["Self-Care"] - weekday_dev_exp,)
 
+    # calculate the time period to plot
     last_month = date.today() - timedelta(days=days_count)
     data = data[data.Date >= last_month.strftime("%Y-%m-%d")]
 
+    # set date as index
     data.Date = pd.to_datetime(data.Date)
     data.set_index("Date", inplace=True)
     return data.sort_index()
