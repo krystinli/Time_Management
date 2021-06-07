@@ -1,5 +1,5 @@
 # Time_Management
-This repo is designed to track hours spent in 3 important areas: **work, development, and self-care**. This provides a clear picture on the time investment I made towards my [goal](https://github.com/krystinli/Inner_Space/blob/master/Timeline/2021-01-17_%E2%80%9C%E6%BC%94%E5%91%98%E2%80%9D%E7%9A%84%E8%AF%9E%E7%94%9F.md#%E7%AC%AC%E4%B8%80%E6%AD%A513%E6%9C%88) and hopefully helps me to stay focused on what I want to spend majority of my time on. 
+This repo is designed to track my performance in these 3 areas: **work, development, and self-care**. I set up some expecation and update whether I'm able to hit my targets daily. The performance is calculated by: `performance = expected hours - actual hours`
 
 ![img](https://getlighthouse.com/blog/wp-content/uploads/2016/03/dilbert_career_path.png)
 
@@ -18,4 +18,3 @@ Exercising, meditation, financial planning, etc.💰 🏡 🏃‍♀️
 ### Leetcode
 Time investment is an early indicator, where # of leetcode completed is a reflection/result of the time investment (in coding).
 ![leetcode](https://github.com/krystinli/Time_Management/blob/main/img/leetcode.png)
-
