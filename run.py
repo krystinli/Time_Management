@@ -40,7 +40,7 @@ def import_data():
 def main():
     # 1) read and transform data
     input_data = import_data()
-    clean_data = transform_data(input_data, 30)
+    clean_data = transform_data(input_data)
 
     # 2) plotting performance
     plot_static(clean_data, "Work_Scaled", "blue", "work_plot")
