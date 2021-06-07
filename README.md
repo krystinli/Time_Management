@@ -1,5 +1,6 @@
 # Time_Management
-This repo is designed to track my performance in these 3 areas: **work, development, and self-care**. I set up some expecation and update whether I'm able to hit my targets daily. The performance is calculated by: `performance = expected hours - actual hours`
+This repo is designed to track my performance in these 3 areas: **work, development, and self-care**. I set up some expecation and update whether I'm able to hit my targets daily. 
+- Performance is calculated by: `performance = expected hours - actual hours`
 
 ![img](https://getlighthouse.com/blog/wp-content/uploads/2016/03/dilbert_career_path.png)
 
