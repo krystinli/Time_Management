@@ -1,5 +1,8 @@
 # Time_Management
-This repo is designed to track my performance in these 3 areas: **work, development, and self-care**. I set up the expecation for the current period of time and update the input data with my hours spent each day. The embedded logic computes a performance scale that shows whether I'm able to hit my targets daily. 
+This repo is designed to track my performance in these 3 areas: **work, development, and self-care**. 
+
+**How does it work?**
+I set up some expecation for the current monitoring period and then update inputs with my activities. The embedded logic computes a performance rating that shows whether I'm able to hit my target. A positive rating means I'm hitting the target; a negative rating means otherwise. 
 - Performance is calculated by: `performance = expected hours - actual hours`
 - Overall goal: aim to meet my target consistenly and smooth out the productivity curve
 
