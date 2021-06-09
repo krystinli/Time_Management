@@ -9,9 +9,9 @@ def transform_data(
     days_count=30,
     # current benchmark setting
     weekday_work_exp=3,
+    weekday_oth_exp=0.25,
     weekend_work_exp=0.5,
-    weekday_dev_exp=0.25,
-    weekend_dev_exp=0.5,
+    weekend_oth_exp=1,
     ):
     """
     set "Date" as index column
@@ -38,13 +38,13 @@ def transform_data(
 
     data["Dev_Scaled"] = np.where(
         (data["Day"]=="Saturday") | (data["Day"]=="Sunday"),
-        data["Development"] - weekend_dev_exp,
-        data["Development"] - weekday_dev_exp,)
+        data["Development"] - weekend_oth_exp,
+        data["Development"] - weekday_oth_exp,)
 
     data["Care_Scaled"] = np.where(
         (data["Day"]=="Saturday") | (data["Day"]=="Sunday"),
-        data["Self-Care"] - weekend_dev_exp,
-        data["Self-Care"] - weekday_dev_exp,)
+        data["Self-Care"] - weekend_oth_exp,
+        data["Self-Care"] - weekday_oth_exp,)
 
     # calculate the time period to plot
     last_month = date.today() - timedelta(days=days_count)
