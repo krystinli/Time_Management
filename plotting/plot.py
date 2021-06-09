@@ -48,7 +48,9 @@ def transform_data(
 
     # calculate the time period to plot
     last_month = date.today() - timedelta(days=days_count)
-    data = data[data.Date >= last_month.strftime("%Y-%m-%d")]
+    data = data[
+        (data.Date >= last_month.strftime("%Y-%m-%d")) &
+        (data.Date < date.today().strftime("%Y-%m-%d"))]
 
     # set date as index
     data.Date = pd.to_datetime(data.Date)
