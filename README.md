@@ -2,7 +2,7 @@
 This repo is designed to track my performance in these 3 areas: **work, development, and self-care**. 
 
 **How does it work?**
-I set up some expecation for the current monitoring period and then inputs with my activities. The embedded logic computes a performance rating that shows whether I'm able to hit my target. A positive rating means I'm hitting the target; a negative rating means otherwise. 
+I set up some expecation for the current monitoring period and then update inputs with my activities. The embedded logic computes a performance rating that shows whether I'm able to hit my target. A positive rating means I'm hitting the target; a negative rating means otherwise. 
 - Performance is calculated by: `performance = expected hours - actual hours`
 - Overall goal: aim to meet my target consistenly and smooth out the productivity curve
 
