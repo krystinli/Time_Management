@@ -13,11 +13,11 @@ Meetings and plannings don't count 👀
 ![work](https://github.com/krystinli/Time_Management/blob/main/img/work_plot.png)
 
 ### Development 🌳 - Invest in my development
-Personal projects and time spent on learnings (outside of work) 📚
+Personal projects and time spent on learnings (outside of work) 📚, financial 💰
 ![coding](https://github.com/krystinli/Time_Management/blob/main/img/dev_plot.png)
 
 ### Self-Care 💟 - Prioritize my well-being
-Exercising, meditation, financial planning, etc.💰 🏡 🏃‍♀️
+Exercising, meditation, planning, etc. 🏡 🏃‍♀️
 ![planning](https://github.com/krystinli/Time_Management/blob/main/img/care_plot.png)
 
 ### Leetcode
