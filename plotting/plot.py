@@ -3,6 +3,23 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import date, timedelta, datetime
+import seaborn as sns; sns.set_theme()
+
+def heat_map(
+    data,
+    days_count=10,
+    ):
+    """
+    """
+    data = pd.read_csv("data/data2.csv")
+    last_month = date.today() - timedelta(days=days_count)
+    data = data[
+        (data.Date >= last_month.strftime("%Y-%m-%d")) &
+        (data.Date <= date.today().strftime("%Y-%m-%d"))]
+    data.Date = pd.to_datetime(data.Date)
+    data.set_index("Date", inplace=True)
+    data = data[["Work", "Development", "Self-Care"]]
+    return data
 
 def transform_data(
     data,
