@@ -3,23 +3,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import date, timedelta, datetime
-import seaborn as sns; sns.set_theme()
-
-def heat_map(
-    data,
-    days_count=10,
-    ):
-    """
-    """
-    data = pd.read_csv("data/data2.csv")
-    last_month = date.today() - timedelta(days=days_count)
-    data = data[
-        (data.Date >= last_month.strftime("%Y-%m-%d")) &
-        (data.Date <= date.today().strftime("%Y-%m-%d"))]
-    data.Date = pd.to_datetime(data.Date)
-    data.set_index("Date", inplace=True)
-    data = data[["Work", "Development", "Self-Care"]]
-    return data
 
 def transform_data(
     data,
@@ -115,9 +98,9 @@ def plot_leetcode():
     plot leetcode progress
     save it under img/
     """
-    x = ["2020-12", "2021-01", "2021-02", "2021-03",]
-    z = [27, 29, 0, 0] # total by month end
-    y = [9, 2, 0, 0] # difference
+    x = ["2021-09", "2021-10", "2021-11", "2021-12",]
+    z = [0, 0, 0, 0] # total by month end
+    y = [0, 0, 0, 0] # difference
 
     fig, ax = plt.subplots()
     fig.set_size_inches(18, 5) # img size
