@@ -42,6 +42,8 @@ def main():
     input_data = import_data()
     clean_data = transform_data(input_data)
 
+    print(clean_data.head(10))
+
     # 2) plotting performance
     plot_static(clean_data, "Work_Scaled", "blue", "work_plot")
     plot_static(clean_data, "Dev_Scaled", "red", "dev_plot")

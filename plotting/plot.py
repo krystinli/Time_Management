@@ -8,10 +8,12 @@ def transform_data(
     data,
     days_count=30,
     # current benchmark setting
-    weekday_work_exp=3,
-    weekday_oth_exp=0.25,
-    weekend_work_exp=0.5,
-    weekend_oth_exp=1,
+    weekday_work_exp=2,
+    weekday_dev_exp=0.75,
+    weekday_care_exp=0.25,
+    weekend_work_exp=0,
+    weekend_dev_exp=1.5,
+    weekend_care_exp=0.5,
     ):
     """
     set "Date" as index column
@@ -19,16 +21,6 @@ def transform_data(
     Transform the Y-axis value from hours to performance
 
     performance = expected hours - actual hours
-
-    weekday expecation:
-        work = 4 hr
-        development = 0.5 hr
-        self-care = 0.5 hr
-
-    weekend expecation:
-        work = 1 hr
-        development = 1 hr
-        self-care = 1 hr
     """
     # transform y-axis from hours to performance
     data["Work_Scaled"] = np.where(
@@ -38,13 +30,13 @@ def transform_data(
 
     data["Dev_Scaled"] = np.where(
         (data["Day"]=="Saturday") | (data["Day"]=="Sunday"),
-        data["Development"] - weekend_oth_exp,
-        data["Development"] - weekday_oth_exp,)
+        data["Development"] - weekend_dev_exp,
+        data["Development"] - weekday_dev_exp,)
 
     data["Care_Scaled"] = np.where(
         (data["Day"]=="Saturday") | (data["Day"]=="Sunday"),
-        data["Self-Care"] - weekend_oth_exp,
-        data["Self-Care"] - weekday_oth_exp,)
+        data["Self-Care"] - weekend_care_exp,
+        data["Self-Care"] - weekday_care_exp,)
 
     # calculate the time period to plot
     last_month = date.today() - timedelta(days=days_count)
