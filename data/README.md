@@ -18,6 +18,7 @@
 ```
 
 **Before `2021-10-17`**
+- First try
 ```py
     weekday expecation:
         work = 3 hr
