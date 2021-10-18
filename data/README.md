@@ -1,6 +1,8 @@
 ## Target_Update
 
 **Update on `2021-10-17`**
+- Reduce work on weekend
+- Improve development expectation
 ```py
     weekday expecation:
         work = 2 hr
