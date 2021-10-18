@@ -2,7 +2,7 @@
 
 
 **Before `2021-10-17`**
-```
+```py
     weekday expecation:
         work = 3 hr
         development = 0.25 hr
