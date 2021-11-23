@@ -39,6 +39,8 @@ This sheet tracks my updates for benchmark according to my short term goals 🎯
         total = 2
 ```
 
+<img src="https://cdn.w600.comps.canstockphoto.com/cartoon-coffee-cup-and-study-books-eps-vectors_csp53895339.jpg" width=400 />
+
 **Before `2021-10-17`**
 - First try
 ```py
