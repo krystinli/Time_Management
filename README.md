@@ -10,9 +10,8 @@ I set up some expecation for the current monitoring period and then update input
 
 ## Total 🎯
 Total hours spent in all 3 categories
-- Dec 2nd half:
-- Dec 1st half: 🌟🌟
-- Nov 2nd half: ⭐
+- **Dec:** 🌟🌟🌟
+- **Nov:** ⭐
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/total_plot.png)
 
 ### Development 🌳 - Invest in my development
@@ -26,4 +25,3 @@ Meetings and plannings don't count 👀
 ### Self-Care 💟 - Prioritize my well-being
 Exercising, meditation, planning, etc. 🏡 🏃‍♀️
 ![planning](https://github.com/krystinli/Time_Management/blob/main/img/care_plot.png)
-
