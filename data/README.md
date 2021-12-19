@@ -3,7 +3,7 @@ This sheet tracks my updates for benchmark according to my short term goals 🎯
 - For example, if I decided to lose weight which requires more workout 🏋️‍♀️ than normal 
 - I would raise the hours for `self-care` to include that expectation
 
-**Update on `2021-11-23`**
+### Update on `2021-12-19`
 - Increase time for self-care
 - Reduce expectation for development 
 ```py
@@ -26,7 +26,7 @@ This sheet tracks my updates for benchmark according to my short term goals 🎯
 
 <img src="https://i.ytimg.com/vi/DQhSPAKhN7w/maxresdefault.jpg" width=300 />
 
-**Update on `2021-11-23`**
+### Update on `2021-11-23`
 - Increase time for self-care
 - Smooth the expectation for development (1 hr everyday throughout the week)
 ```py
@@ -45,7 +45,7 @@ This sheet tracks my updates for benchmark according to my short term goals 🎯
 
 <img src="https://i.ytimg.com/vi/DQhSPAKhN7w/maxresdefault.jpg" width=300 />
 
-**Update on `2021-10-17`**
+### Update on `2021-10-17`
 - Reduce work on weekend
 - Improve development expectation
 ```py
@@ -64,7 +64,7 @@ This sheet tracks my updates for benchmark according to my short term goals 🎯
 
 <img src="https://cdn.w600.comps.canstockphoto.com/cartoon-coffee-cup-and-study-books-eps-vectors_csp53895339.jpg" width=300 />
 
-**Before `2021-10-17`**
+### Before `2021-10-17` 
 - First try
 ```py
     weekday expecation:
