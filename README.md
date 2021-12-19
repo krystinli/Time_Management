@@ -10,6 +10,9 @@ I set up some expecation for the current monitoring period and then update input
 
 ## Total 🎯
 Total hours spent in all 3 categories
+- Dec 2nd half:
+- Dec 1st half: 🌟🌟
+- Nov 2nd half: ⭐
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/total_plot.png)
 
 ### Development 🌳 - Invest in my development
