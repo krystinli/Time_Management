@@ -8,6 +8,10 @@ I set up some expecation for the current monitoring period and then update input
 
 ![img](https://getlighthouse.com/blog/wp-content/uploads/2016/03/dilbert_career_path.png)
 
+## Total 🎯
+Total hours spent in all 3 categories
+![total](https://github.com/krystinli/Time_Management/blob/main/img/total_plot.png)
+
 ### Development 🌳 - Invest in my development
 Personal projects and time spent on learnings (outside of work) 📚, financial 💰
 ![coding](https://github.com/krystinli/Time_Management/blob/main/img/dev_plot.png)
@@ -20,6 +24,3 @@ Meetings and plannings don't count 👀
 Exercising, meditation, planning, etc. 🏡 🏃‍♀️
 ![planning](https://github.com/krystinli/Time_Management/blob/main/img/care_plot.png)
 
-### Leetcode
-Time investment is an early indicator, where # of leetcode completed is a reflection/result of the time investment (in coding).
-![leetcode](https://github.com/krystinli/Time_Management/blob/main/img/leetcode.png)
