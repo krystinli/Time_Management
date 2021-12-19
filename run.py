@@ -45,9 +45,10 @@ def main():
     print(clean_data.head(10))
 
     # 2) plotting performance
-    plot_static(clean_data, "Work_Scaled", "blue", "work_plot")
-    plot_static(clean_data, "Dev_Scaled", "red", "dev_plot")
-    plot_static(clean_data, "Care_Scaled", "green", "care_plot")
+    plot_static(clean_data, "Work_Scaled", "blue", "work_plot", 0)
+    plot_static(clean_data, "Dev_Scaled", "red", "dev_plot", 0)
+    plot_static(clean_data, "Care_Scaled", "green", "care_plot", 0)
+    plot_static(clean_data, "Total", "purple", "total_plot", 2)
 
     # 5) leetcode plot
 #     plot_leetcode() # only run at month end to refresh leetcode plot

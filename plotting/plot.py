@@ -7,13 +7,14 @@ from datetime import date, timedelta, datetime
 def transform_data(
     data,
     days_count=30,
-    # current benchmark setting
+    # current benchmark setting for weekday
     weekday_work_exp=2,
-    weekday_dev_exp=0.75,
-    weekday_care_exp=0.25,
+    weekday_dev_exp=0.5,
+    weekday_care_exp=1,
+    # current benchmark setting for weekend
     weekend_work_exp=0,
-    weekend_dev_exp=1.5,
-    weekend_care_exp=0.5,
+    weekend_dev_exp=0.5,
+    weekend_care_exp=1.5,
     ):
     """
     set "Date" as index column
@@ -38,6 +39,8 @@ def transform_data(
         data["Self-Care"] - weekend_care_exp,
         data["Self-Care"] - weekday_care_exp,)
 
+    data["Total"] = data["Work"] + data["Development"] + data["Self-Care"]
+
     # calculate the time period to plot
     last_month = date.today() - timedelta(days=days_count)
     data = data[
@@ -54,7 +57,7 @@ def plot_static(
         colname,
         color,
         img_name,
-        target_low=0,
+        target_low, # benchmark
         target_high=0
     ):
     """
@@ -77,8 +80,7 @@ def plot_static(
            title = colname)
 
     # target line
-    # plt.axhline(y=target_low, c='r', linestyle='--')
-    plt.axhline(y=0, c='black', linestyle='--', linewidth=2)
+    plt.axhline(y=target_low, c='black', linestyle='--', linewidth=2)
     # plt.axhline(y=target_high, c='g', linestyle='--')
     plt.legend()
 
