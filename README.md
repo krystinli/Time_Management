@@ -10,7 +10,7 @@ I set up some expecation for the current monitoring period and then update input
 
 ## Total 🎯
 Total hours spent in all 3 categories
-- **Dec:** 🌟🌟🌟
+- **Dec:** ⭐
 - **Nov:** ⭐
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/total_plot.png)
 
