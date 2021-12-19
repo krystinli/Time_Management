@@ -24,6 +24,8 @@ This sheet tracks my updates for benchmark according to my short term goals 🎯
 - Do more exercise to increase overall productivity
 - More updates on the tracker
 
+<img src="https://i.ytimg.com/vi/DQhSPAKhN7w/maxresdefault.jpg" width=300 />
+
 **Update on `2021-11-23`**
 - Increase time for self-care
 - Smooth the expectation for development (1 hr everyday throughout the week)
@@ -41,7 +43,7 @@ This sheet tracks my updates for benchmark according to my short term goals 🎯
         total = 2
 ```
 
-<img src="https://i.ytimg.com/vi/DQhSPAKhN7w/maxresdefault.jpg" width=500 />
+<img src="https://i.ytimg.com/vi/DQhSPAKhN7w/maxresdefault.jpg" width=300 />
 
 **Update on `2021-10-17`**
 - Reduce work on weekend
@@ -60,7 +62,7 @@ This sheet tracks my updates for benchmark according to my short term goals 🎯
         total = 2
 ```
 
-<img src="https://cdn.w600.comps.canstockphoto.com/cartoon-coffee-cup-and-study-books-eps-vectors_csp53895339.jpg" width=400 />
+<img src="https://cdn.w600.comps.canstockphoto.com/cartoon-coffee-cup-and-study-books-eps-vectors_csp53895339.jpg" width=300 />
 
 **Before `2021-10-17`**
 - First try
