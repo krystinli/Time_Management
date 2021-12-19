@@ -5,6 +5,27 @@ This sheet tracks my updates for benchmark according to my short term goals 🎯
 
 **Update on `2021-11-23`**
 - Increase time for self-care
+- Reduce expectation for development 
+```py
+    weekday expecation:
+        work = 2 hr
+        development = 1 hr -> 0.5 hr
+        self-care = 1 hr
+        total = 3.5 
+
+    weekend expecation:
+        work = 0 hr
+        development = 1 hr -> 0.5 hr
+        self-care = 1 hr -> 1.5 hr
+        total = 2
+```
+
+**Reflection**
+- Do more exercise to increase overall productivity
+- More updates on the tracker
+
+**Update on `2021-11-23`**
+- Increase time for self-care
 - Smooth the expectation for development (1 hr everyday throughout the week)
 ```py
     weekday expecation:
