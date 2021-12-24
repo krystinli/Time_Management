@@ -42,16 +42,14 @@ def main():
     input_data = import_data()
     clean_data = transform_data(input_data)
 
-    print(clean_data.head(10))
+    print(clean_data.tail(10))
 
     # 2) plotting performance
     plot_static(clean_data, "Work_Scaled", "blue", "work_plot", 0)
     plot_static(clean_data, "Dev_Scaled", "red", "dev_plot", 0)
     plot_static(clean_data, "Care_Scaled", "green", "care_plot", 0)
-    plot_static(clean_data, "Total", "purple", "total_plot", 2)
+    plot_static(clean_data, "Total", "yellow", "total_plot", 2)
 
-    # 5) leetcode plot
-#     plot_leetcode() # only run at month end to refresh leetcode plot
 
 if __name__ == "__main__":
     main()
