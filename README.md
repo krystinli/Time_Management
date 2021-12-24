@@ -1,5 +1,5 @@
 # Time_Management
-> All big things come from small beginnings. The seed of every habit is a single, tiny decision.
+> Goals are good for setting a direction, but systems are best for making progress.
 
 This repo is designed to track my time management in these 3 areas: **work, development, and self-care**. I want to make sure I invest a bit in each of the 3 areas everyday for a good habit formation. 
 
