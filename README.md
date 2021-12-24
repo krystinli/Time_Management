@@ -1,5 +1,6 @@
 # Time_Management
-This repo is designed to track my performance in these 3 areas: **work, development, and self-care**. 
+> All big things come from small beginnings. The seed of every habit is a single, tiny decision.
+This repo is designed to track my time management in these 3 areas: **work, development, and self-care**. I want to make sure I invest a bit in each of the 3 areas everyday for a good habit formation. 
 
 **How does it work?**
 I set up some expecation for the current monitoring period and then update inputs with my activities. The embedded logic computes a performance rating that shows whether I'm able to hit my target. A positive rating means I'm hitting the target; a negative rating means otherwise. 
