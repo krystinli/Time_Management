@@ -16,10 +16,12 @@ Total hours spent in all 3 categories
 Personal projects and time spent on learnings (outside of work) 📚, financial 💰
 ![coding](https://github.com/krystinli/Time_Management/blob/main/img/dev_plot.png)
 
+### Self-Care 💟 - Prioritize my well-being
+Exercising, meditation, planning, etc. 🏡 🏃‍♀️
+![planning](https://github.com/krystinli/Time_Management/blob/main/img/care_plot.png)
+
 ### Work 🧑‍🔬 - Work Codings and Analysis
 Meetings and plannings don't count 👀
 ![work](https://github.com/krystinli/Time_Management/blob/main/img/work_plot.png)
 
-### Self-Care 💟 - Prioritize my well-being
-Exercising, meditation, planning, etc. 🏡 🏃‍♀️
-![planning](https://github.com/krystinli/Time_Management/blob/main/img/care_plot.png)
+
