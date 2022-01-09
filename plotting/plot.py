@@ -87,26 +87,27 @@ def plot_static(
     plt.savefig("img/" + img_name + ".png")
     print("Generated plot for", colname)
 
-# def plot_leetcode():
-#     """
-#     plot leetcode progress
-#     save it under img/
-#     """
-#     x = ["2021-09", "2021-10", "2021-11", "2021-12",]
-#     z = [0, 0, 0, 0] # total by month end
-#     y = [0, 0, 0, 0] # difference
-#
-#     fig, ax = plt.subplots()
-#     fig.set_size_inches(18, 5) # img size
-#
-#     plt.bar(x, y,
-#             color="pink",
-#             edgecolor="yellow",
-#             linewidth=2,)
-#
-#     ax.set(xlabel = "Month",
-#            ylabel = "Number of Questions",
-#            title = "Leetcode Questions completed",)
-#
-#     plt.savefig("img/" + "leetcode" + ".png")
-#     print("Generated plot for leetcode.")
+
+def plot_body_mind():
+    """
+    plot body and mind investment
+    (Sub category of of self-care)
+    save it under img/
+    """
+    data=[["Week 1",1,0,1], # sunday
+          ["Week 2",0,0,0],
+          ["Week 3",0,0,0],
+          ["Week 4",0,0,0]]
+
+    df=pd.DataFrame(data,
+        columns=["Week of the Month","workout","meditation","nap"])
+
+    df.plot(
+        x="Week of the Month",
+        y=["workout", "meditation", "nap"],
+        kind="bar",
+        figsize=(18,5)
+    )
+
+    plt.savefig("img/" + "2022_Jan_Tracking" + ".png")
+    print("Generated plot for body_mind.")

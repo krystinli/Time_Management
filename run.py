@@ -1,6 +1,6 @@
 import pandas as pd
 from datetime import date, timedelta, datetime
-from plotting.plot import transform_data, plot_static
+from plotting.plot import transform_data, plot_static, plot_body_mind
 import os
 
 # os.getcwd()
@@ -49,7 +49,7 @@ def main():
     plot_static(clean_data, "Dev_Scaled", "red", "dev_plot", 0)
     plot_static(clean_data, "Care_Scaled", "green", "care_plot", 0)
     plot_static(clean_data, "Total", "yellow", "total_plot", 2)
-
+    plot_body_mind()
 
 if __name__ == "__main__":
     main()
