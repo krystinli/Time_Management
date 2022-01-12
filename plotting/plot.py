@@ -94,8 +94,9 @@ def plot_body_mind():
     (Sub category of of self-care)
     save it under img/
     """
-    data=[["Week 1",1,0,1], # sunday
-          ["Week 2",0,0,0],
+    # workout, meditation, nap
+    data=[["Week 1",1,1,1], # Sunday (Starting Point)
+          ["Week 2",0,1,2], # Jan 10-16
           ["Week 3",0,0,0],
           ["Week 4",0,0,0]]
 
