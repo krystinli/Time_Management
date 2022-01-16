@@ -50,14 +50,20 @@ def plot_body_mind():
           ["Week 3",0,0,0],
           ["Week 4",0,0,0]]
 
-    df=pd.DataFrame(data,
+    # convert above data into pd df
+    df=pd.DataFrame(
+        data,
         columns=["Week of the Month","workout","meditation","nap"])
 
     df.plot(
-        x="Week of the Month",
-        y=["workout", "meditation", "nap"],
-        kind="bar",
-        figsize=(18,5)
+        x = "Week of the Month",
+        y = ["workout", "meditation", "nap"],
+        kind = "bar",
+        figsize = (18,8),
+        title = "Self Care Breakdown Analysis",
+        stacked = True,
+        legend = True,
+        colormap = 'Pastel1'
     )
 
     plt.savefig("img/" + "2022_Jan_Tracking" + ".png")
