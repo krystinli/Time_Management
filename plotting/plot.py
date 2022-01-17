@@ -46,9 +46,9 @@ def plot_body_mind():
     """
     # workout, meditation, nap
     data=[["Week 1",1,1,1], # Sunday (Starting Point)
-          ["Week 2",5,1,7], # Jan 10-16, out of 7
-          ["Week 3",0,0,0],
-          ["Week 4",0,0,0]]
+          ["Week 2",6,2,7], # Jan 10-16, out of 7
+          ["Week 3",0,0,0], # Jan 17-23
+          ["Week 4",0,0,0]] # Jan 24-30
 
     # convert above data into pd df
     df=pd.DataFrame(
