@@ -7,7 +7,7 @@ For this month, I want to deep dive into "self-care" caregory by focusing on the
 - Meditation 🍃
 - Napping 😴
 
-**Progress**
+**Progress_Tracking**
 - Week 1: Goal Setting
 - Week 2: Energy Boost
 - Week 3: Energy drop
