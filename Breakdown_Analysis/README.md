@@ -7,4 +7,10 @@ For this month, I want to deep dive into "self-care" caregory by focusing on the
 - Meditation 🍃
 - Napping 😴
 
+**Progress_Tracking**
+- Week 1: Goal Setting
+- Week 2: Energy Boost
+- Week 3: Energy drop
+- Week 4: TBD
+
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Jan_Tracking.png)
