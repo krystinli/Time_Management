@@ -38,33 +38,33 @@ def plot_static(
     print("Generated plot for", colname)
 
 
-def plot_body_mind():
-    """
-    plot body and mind investment
-    (Sub category of of self-care)
-    save it under img/
-    """
-    # workout, meditation, nap
-    data=[["Week 1",1,1,1], # Sunday (Starting Point)
-          ["Week 2",6,2,7], # Jan 10-16, out of 7
-          ["Week 3",3,0,6], # Jan 17-23
-          ["Week 4",1,0,1]] # Jan 24-30
-
-    # convert above data into pd df
-    df=pd.DataFrame(
-        data,
-        columns=["Week of the Month","workout","meditation","nap"])
-
-    df.plot(
-        x = "Week of the Month",
-        y = ["workout", "meditation", "nap"],
-        kind = "bar",
-        figsize = (18,8),
-        title = "Self Care Breakdown Analysis",
-        stacked = True,
-        legend = True,
-        colormap = 'Pastel1'
-    )
-
-    plt.savefig("img/" + "2022_Jan_Tracking" + ".png")
-    print("Generated plot for body_mind.")
+# def plot_body_mind():
+#     """
+#     plot body and mind investment
+#     (Sub category of of self-care)
+#     save it under img/
+#     """
+#     # workout, meditation, nap
+#     data=[["Week 1",1,1,1], # Sunday (Starting Point)
+#           ["Week 2",6,2,7], # Jan 10-16, out of 7
+#           ["Week 3",3,0,6], # Jan 17-23
+#           ["Week 4",1,0,1]] # Jan 24-30
+#
+#     # convert above data into pd df
+#     df=pd.DataFrame(
+#         data,
+#         columns=["Week of the Month","workout","meditation","nap"])
+#
+#     df.plot(
+#         x = "Week of the Month",
+#         y = ["workout", "meditation", "nap"],
+#         kind = "bar",
+#         figsize = (18,8),
+#         title = "Self Care Breakdown Analysis",
+#         stacked = True,
+#         legend = True,
+#         colormap = 'Pastel1'
+#     )
+#
+#     plt.savefig("img/" + "2022_Jan_Tracking" + ".png")
+#     print("Generated plot for body_mind.")
