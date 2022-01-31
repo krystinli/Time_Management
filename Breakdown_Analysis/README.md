@@ -2,7 +2,7 @@
 For each month, I want to create a mini-focus on one of the 3 categories and break that one into smaller sub-categories for close monitoring.
 
 ## 2022_Feb 📆
-For this month, I want to focus on exercising:
+For this month, I want to focus on exercising 🏃‍♀️
 - Week 1: 
 - Week 2: 
 - Week 3: 
