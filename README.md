@@ -14,10 +14,6 @@ I set up an expecation for the current monitoring period (outlined [here](https:
 Total hours spent in all 3 categories
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/total_plot.png)
 
-### Development 🌳 - Investing in my growth
-Personal projects, time spent on learnings outside of work 📚, and financial growth 💰
-![coding](https://github.com/krystinli/Time_Management/blob/main/img/dev_plot.png)
-
 ### Self-Care 💟 - Prioritize my well-being
 Exercising, meditation, planning, etc. 🏡 🏃‍♀️
 ![planning](https://github.com/krystinli/Time_Management/blob/main/img/care_plot.png)
@@ -26,4 +22,6 @@ Exercising, meditation, planning, etc. 🏡 🏃‍♀️
 Meetings and plannings don't count 👀
 ![work](https://github.com/krystinli/Time_Management/blob/main/img/work_plot.png)
 
-
+### Development 🌳 - Investing in my growth
+Personal projects, time spent on learnings outside of work 📚, and financial growth 💰
+![coding](https://github.com/krystinli/Time_Management/blob/main/img/dev_plot.png)
