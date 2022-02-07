@@ -1,7 +1,29 @@
 ## Target_Update
-This sheet tracks my updates for benchmark according to my short term goals 🎯
-- For example, if I decided to lose weight which requires more workout 🏋️‍♀️ than normal 
-- I would raise the hours for `self-care` to include that expectation
+This sheet tracks my updates for benchmarking according to my short term goals 🎯
+- For example, if I decided to lose weight which requires more workout 🏋️‍♀️ than normal, I would raise the hours for `self-care` to include that expectation
+- To keep a healthy balance, I would reduce hours in some other area to make the goal more realistic 
+
+### Update on `2022-02-07`
+- Increase time for self-care again as I'm getting close to due date
+- Reduce work hours 
+```py
+    weekday expecation:
+        work = 1 hr
+        development = 0.5 hr
+        self-care = 2 hr
+        total = 3.5 
+
+    weekend expecation:
+        work = 1 hr
+        development = 0.5 hr
+        self-care = 2 hr
+        total = 3.5
+```
+
+**Reflection**
+- Do more exercise to help with labour 
+
+<img src="https://cdn-icons-png.flaticon.com/512/5260/5260242.png" width=300 />
 
 ### Update on `2021-12-19`
 - Increase time for self-care
