@@ -45,7 +45,7 @@ def plot_body_mind():
     save it under img/
     """
     # day of the week
-    data=[["Week 1",0,0,0,0,0,0,0,],
+    data=[["Week 1",0,0,0,1,0,0,1,],
           ["Week 2",0,0,0,0,0,0,0,],
           ["Week 3",0,0,0,0,0,0,0,],
           ["Week 4",0,0,0,0,0,0,0,]]
