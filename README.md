@@ -18,7 +18,7 @@ I set up an expecation for the current monitoring period (outlined [here](https:
 Exercising, meditation, planning, etc. 🏡 🏃‍♀️ 
 ![planning](https://github.com/krystinli/Time_Management/blob/main/img/care_plot.png)
 
-### Work 💻 - Work related coding and analytical tasks
+### Work-Work 💻 - Work related tasks completion, the idea of getting things done ✔️
 Meetings and plannings don't count 👀
 ![work](https://github.com/krystinli/Time_Management/blob/main/img/work_plot.png)
 
