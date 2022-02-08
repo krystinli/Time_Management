@@ -64,7 +64,7 @@ def update_data(data):
 
 def transform_data(
     data,
-    days_count=30,
+    days_count=20,
     # current benchmark setting for weekday
     weekday_work_exp=1,
     weekday_dev_exp=0.5,
@@ -103,7 +103,7 @@ def transform_data(
     last_month = date.today() - timedelta(days=days_count)
     data = data[
         (data.Date >= last_month.strftime("%Y-%m-%d")) &
-        (data.Date <= date.today().strftime("%Y-%m-%d"))].copy()
+        (data.Date < date.today().strftime("%Y-%m-%d"))].copy()
 
     # set date as index
     data.Date = pd.to_datetime(data.Date)
