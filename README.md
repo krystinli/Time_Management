@@ -25,3 +25,6 @@ Meetings and plannings don't count 👀. The idea is actually getting something 
 ### Development 🌳 - Investing in my growth
 Personal projects, time spent on learnings outside of work 📚, and financial growth 💰
 ![coding](https://github.com/krystinli/Time_Management/blob/main/img/dev_plot.png)
+
+## 03_Breakdown
+Additional tracking for this month [here](https://github.com/krystinli/Time_Management/tree/main/Breakdown_Analysis#2022_feb-).
