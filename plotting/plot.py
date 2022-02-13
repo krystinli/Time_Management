@@ -63,7 +63,7 @@ def plot_body_mind():
         title = "Feb Workout Breakdown Analysis",
         stacked = True,
         legend = True,
-        colormap = "tab10" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
+        colormap = "cool" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
     )
 
     plt.savefig("img/" + "2022_Feb_Tracking" + ".png")
