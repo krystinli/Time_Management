@@ -46,8 +46,8 @@ def plot_body_mind():
     """
     # day of the week
     data=[["Week 1",0,0,0,1,0,0,1,],
-          ["Week 2",2,1,1,2,0,0,0,], # this week
-          ["Week 3",0,0,0,0,0,0,0,],
+          ["Week 2",2,1,1,2,1,1,1,],
+          ["Week 3",0,0,0,0,0,0,0,], # this week
           ["Week 4",0,0,0,0,0,0,0,]]
 
     # convert above data into pd df
