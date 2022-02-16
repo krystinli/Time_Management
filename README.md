@@ -33,8 +33,8 @@ Additional tracking for this month [here](https://github.com/krystinli/Time_Mana
 ## 04_Pipeline
 ```mermaid
 graph LR;
-    A[old data] --> B[updated data]
-    E[Daily Activities] --> B[updated data]
-    B[updated data] --> C[transformed data]
-    C[transformed data] --> D[plots]
+    A[Historical Data] --> B[New Dataset]
+    E[New Activities] --> B[New Dataset]
+    B[Updated Data] --> C[Transformed Data]
+    C[Transformed Data] --> D[Plots]
 ```
