@@ -35,7 +35,7 @@ Update flowchart:
 
 ```mermaid
 graph LR;
-    old data --> updated data
-    updated data --> transformed data
-    transformed data --> plots
+    A[old data] --> B[updated data]
+    B[updated data] --> C[transformed data]
+    C[transformed data] --> D[plots]
 ```
