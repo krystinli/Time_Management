@@ -1,5 +1,5 @@
 # Version_Control
-This sheet tracks my updates for benchmarking according to my short term goals 🎯
+This sheet tracks my updates for benchmarking according to my short term goals 🎯. The actual hours are meaningless without the comparison to benchmark hours. 
 - For example, if I decided to lose weight which requires more workout 🏋️‍♀️ than normal, I would raise the hours for `self-care` to include that expectation
 - To keep a healthy balance, I would reduce hours in some other area to make the goal more realistic 
 
