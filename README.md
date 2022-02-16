@@ -29,3 +29,13 @@ Personal projects, time spent on learnings outside of work 📚, and financial g
 ## 03_Breakdown
 Additional tracking for this month [here](https://github.com/krystinli/Time_Management/tree/main/Breakdown_Analysis#2022_feb-).
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Feb_Tracking.png)
+
+## 04_Pipeline
+Update flowchart:
+
+```mermaid
+graph LR;
+    old data --> updated data
+    updated data --> transformed data
+    transformed data --> plots
+```
