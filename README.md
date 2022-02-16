@@ -31,6 +31,7 @@ Additional tracking for this month [here](https://github.com/krystinli/Time_Mana
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Feb_Tracking.png)
 
 ## 04_Pipeline
+How these plots are generated? 📊
 ```mermaid
 graph LR;
     A[Historical Data] --> B[New Dataset]
