@@ -31,11 +31,10 @@ Additional tracking for this month [here](https://github.com/krystinli/Time_Mana
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Feb_Tracking.png)
 
 ## 04_Pipeline
-Update flowchart:
-
 ```mermaid
 graph LR;
     A[old data] --> B[updated data]
+    E[Daily Activities] --> B[updated data]
     B[updated data] --> C[transformed data]
     C[transformed data] --> D[plots]
 ```
