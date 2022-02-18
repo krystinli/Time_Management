@@ -68,3 +68,33 @@ def plot_body_mind():
 
     plt.savefig("img/" + "2022_Feb_Tracking" + ".png")
     print("Generated plot for body_mind.")
+
+def plot_self_control():
+    """
+    plot self_control times
+    save it under img/
+    """
+    # day of the week
+    data=[["Week 1",0,0,0,0,0,0,0,],
+          ["Week 2",0,0,0,0,0,0,0,],
+          ["Week 3",0,0,0,0,1,0,0,], # this week
+          ["Week 4",0,0,0,0,0,0,0,]]
+
+    # convert above data into pd df
+    df=pd.DataFrame(
+        data,
+        columns=["Week of the Month","Mon","Tue","Wed","Thu","Fri","Sat","Sun"])
+
+    df.plot(
+        x = "Week of the Month",
+        y = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+        kind = "bar",
+        figsize = (18,8),
+        title = "Feb Self-Control Tracking",
+        stacked = True,
+        legend = True,
+        colormap = "coolwarm" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
+    )
+
+    plt.savefig("img/" + "2022_Feb_Tracking2" + ".png")
+    print("Generated plot for self_control.")
