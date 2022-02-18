@@ -30,6 +30,8 @@ Personal projects, time spent on learnings outside of work 📚, and financial g
 Additional tracking for this month [here](https://github.com/krystinli/Time_Management/tree/main/Breakdown_Analysis#2022_feb-).
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Feb_Tracking.png)
 
+![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Feb_Tracking2.png)
+
 ## 04_Pipeline
 How are these plots generated? 📊
 ```mermaid
