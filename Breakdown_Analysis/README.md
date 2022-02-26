@@ -25,8 +25,6 @@ For this month, I want to deep dive into "self-care" caregory by focusing on the
 
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Jan_Tracking.png)
 
-![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Jan_Tracking2.png)
-
 **Progress_Tracking**
 - Week 1: Goal Setting
 - Week 2: Energy Boost
