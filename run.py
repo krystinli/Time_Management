@@ -66,13 +66,13 @@ def transform_data(
     data,
     days_count=20,
     # current benchmark setting for weekday
-    weekday_work_exp=1,
-    weekday_dev_exp=0.5,
-    weekday_care_exp=2,
+    weekday_work_exp=0.25,
+    weekday_dev_exp=0.25,
+    weekday_care_exp=1,
     # current benchmark setting for weekend
-    weekend_work_exp=1,
-    weekend_dev_exp=0.5,
-    weekend_care_exp=2,
+    weekend_work_exp=0.25,
+    weekend_dev_exp=0.25,
+    weekend_care_exp=1,
     ):
     """
     set "Date" as index column
@@ -124,9 +124,9 @@ def main():
     plot_static(clean_data, "Work_Scaled", "blue", "work_plot", 0)
     plot_static(clean_data, "Dev_Scaled", "red", "dev_plot", 0)
     plot_static(clean_data, "Care_Scaled", "green", "care_plot", 0)
-    plot_static(clean_data, "Total", "yellow", "total_plot", 2)
-    plot_body_mind()
-    plot_self_control()
+    plot_static(clean_data, "Total", "yellow", "total_plot", 1.5) # fix num
+    # plot_body_mind()
+    # plot_self_control()
 
 if __name__ == "__main__":
     main()
