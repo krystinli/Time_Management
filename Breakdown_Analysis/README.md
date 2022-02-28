@@ -2,8 +2,11 @@
 For each month, I want to create a mini-focus on one of the 3 categories and break that one into smaller sub-categories for close monitoring.
 
 ## 2022_Mar 📆
-Choose a topic for breakdown.
+For this month, I want to focus on exercising 🏃‍♀️
+- Week 1: 
 
+### Workout 🏋️‍♀️
+![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Mar_Tracking.png)
 
 ## 2022_Feb 📆
 For this month, I want to focus on exercising 🏃‍♀️
