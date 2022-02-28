@@ -126,7 +126,7 @@ def main():
     plot_static(clean_data, "Care_Scaled", "green", "care_plot", 0)
     plot_static(clean_data, "Total", "yellow", "total_plot", 1.5) # fix num
     # plot_body_mind()
-    # plot_self_control()
+    plot_self_control()
 
 if __name__ == "__main__":
     main()
