@@ -96,5 +96,5 @@ def plot_self_control():
         colormap = "coolwarm" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
     )
 
-    plt.savefig("img/" + "2022_Mar_Tracking2" + ".png")
+    plt.savefig("img/" + "2022_Mar_Tracking" + ".png")
     print("Generated plot for self_control.")
