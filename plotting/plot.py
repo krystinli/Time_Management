@@ -75,10 +75,10 @@ def plot_self_control():
     save it under img/
     """
     # day of the week
-    data=[["Week 1",0,0,0,0,0,0,0,],
+    data=[["Week 1",0,0,0,0,0,0,0,], # this week
           ["Week 2",0,0,0,0,0,0,0,],
-          ["Week 3",0,0,0,0,1,2,2,],
-          ["Week 4",3,2,0,0,0,0,1,]] # this week
+          ["Week 3",0,0,0,0,0,0,0,],
+          ["Week 4",0,0,0,0,0,0,0,]]
 
     # convert above data into pd df
     df=pd.DataFrame(
@@ -96,5 +96,5 @@ def plot_self_control():
         colormap = "coolwarm" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
     )
 
-    plt.savefig("img/" + "2022_Feb_Tracking2" + ".png")
+    plt.savefig("img/" + "2022_Mar_Tracking2" + ".png")
     print("Generated plot for self_control.")
