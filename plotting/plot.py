@@ -77,7 +77,7 @@ def plot_self_control():
     This month theme: get back to work!
     """
     # day of the week
-    data=[["Week 1",0,0,0,0,0,0,0,], # this week
+    data=[["Week 1",0,0,1,0,0,0,0,], # this week
           ["Week 2",0,0,0,0,0,0,0,],
           ["Week 3",0,0,0,0,0,0,0,],
           ["Week 4",0,0,0,0,0,0,0,]]
