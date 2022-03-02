@@ -6,10 +6,10 @@ For this month, I want to focus on exercising 🏃‍♀️
 - Week 1: 
 
 ### Workout 🏋️‍♀️
-![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Mar_Tracking2.png)
+![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Mar_Tracking.png)
 
 ### Discipline 🚧
-![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Mar_Tracking.png)
+![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Mar_Tracking2.png)
 
 ## 2022_Feb 📆
 For this month, I want to focus on exercising 🏃‍♀️
