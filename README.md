@@ -31,6 +31,8 @@ Additional tracking for this month [here](https://github.com/krystinli/Time_Mana
 
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Mar_Tracking.png)
 
+![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Mar_Tracking2.png)
+
 ## 04_Pipeline
 How are these plots generated? 📊
 ```mermaid
