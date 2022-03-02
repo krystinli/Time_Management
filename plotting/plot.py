@@ -43,12 +43,13 @@ def plot_body_mind():
     plot body and mind investment
     (Sub category of of self-care)
     save it under img/
+    This month theme: exercise!
     """
     # day of the week
-    data=[["Week 1",0,0,0,1,0,0,1,],
-          ["Week 2",2,1,1,2,1,1,1,],
-          ["Week 3",1,0,1,2,2,2,3,],
-          ["Week 4",2,0,0,0,0,0,0,]] # this week
+    data=[["Week 1",0,1,1,0,0,0,0,],
+          ["Week 2",0,0,0,0,0,0,0,],
+          ["Week 3",0,0,0,0,0,0,0,],
+          ["Week 4",0,0,0,0,0,0,0,]] # this week
 
     # convert above data into pd df
     df=pd.DataFrame(
@@ -60,19 +61,20 @@ def plot_body_mind():
         y = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
         kind = "bar",
         figsize = (18,8),
-        title = "Feb Workout Breakdown Analysis",
+        title = "Mar Workout Breakdown Analysis",
         stacked = True,
         legend = True,
         colormap = "cool" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
     )
 
-    plt.savefig("img/" + "2022_Feb_Tracking" + ".png")
+    plt.savefig("img/" + "2022_Mar_Tracking" + ".png")
     print("Generated plot for body_mind.")
 
 def plot_self_control():
     """
     plot self_control times
     save it under img/
+    This month theme: get back to work!
     """
     # day of the week
     data=[["Week 1",0,0,0,0,0,0,0,], # this week
@@ -90,11 +92,11 @@ def plot_self_control():
         y = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
         kind = "bar",
         figsize = (18,8),
-        title = "Feb Self-Control Tracking",
+        title = "Mar Self-Control Tracking",
         stacked = True,
         legend = True,
         colormap = "coolwarm" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
     )
 
-    plt.savefig("img/" + "2022_Mar_Tracking" + ".png")
+    plt.savefig("img/" + "2022_Mar_Tracking2" + ".png")
     print("Generated plot for self_control.")
