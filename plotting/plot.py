@@ -46,10 +46,10 @@ def plot_body_mind():
     This month theme: exercise!
     """
     # day of the week
-    data=[["Week 1",0,1,1,0,0,0,0,],
+    data=[["Week 1",0,1,1,1,0,0,0,], # this week
           ["Week 2",0,0,0,0,0,0,0,],
           ["Week 3",0,0,0,0,0,0,0,],
-          ["Week 4",0,0,0,0,0,0,0,]] # this week
+          ["Week 4",0,0,0,0,0,0,0,]]
 
     # convert above data into pd df
     df=pd.DataFrame(
@@ -74,10 +74,12 @@ def plot_self_control():
     """
     plot self_control times
     save it under img/
-    This month theme: get back to work!
+    This month theme:
+        1) Get back to work
+        2) Control eating
     """
     # day of the week
-    data=[["Week 1",0,0,1,0,0,0,0,], # this week
+    data=[["Week 1",0,0,1,1,0,0,0,], # this week
           ["Week 2",0,0,0,0,0,0,0,],
           ["Week 3",0,0,0,0,0,0,0,],
           ["Week 4",0,0,0,0,0,0,0,]]
