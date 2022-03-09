@@ -3,7 +3,7 @@ For each month, I want to create a mini-focus on one of the 3 categories and bre
 
 ## 2022_Mar 📆
 For this month, I want to focus on exercising 🏃‍♀️
-- **Week 1:** `/7` for workout, `/7` for work work
+- **Week 1:** `4/7` for workout, `3/7` for mindfulness
 - **Week 2:**
 - **Week 3:**
 - **Week 4:**
