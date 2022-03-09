@@ -80,7 +80,7 @@ def plot_self_control():
     """
     # day of the week
     data=[["Week 1",0,0,1,2,1,0,0,],
-          ["Week 2",0,0,0,0,0,0,0,], # this week
+          ["Week 2",0,4,0,0,0,0,0,], # this week
           ["Week 3",0,0,0,0,0,0,0,],
           ["Week 4",0,0,0,0,0,0,0,]]
 
