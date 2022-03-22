@@ -66,13 +66,13 @@ def transform_data(
     data,
     days_count=20,
     # current benchmark setting for weekday
-    weekday_work_exp=0.25,
-    weekday_dev_exp=0.25,
-    weekday_care_exp=1,
+    weekday_work_exp=0.5,
+    weekday_dev_exp=0.5,
+    weekday_care_exp=0.5,
     # current benchmark setting for weekend
-    weekend_work_exp=0.25,
-    weekend_dev_exp=0.25,
-    weekend_care_exp=1,
+    weekend_work_exp=0.5,
+    weekend_dev_exp=0.5,
+    weekend_care_exp=0.5,
     ):
     """
     set "Date" as index column
