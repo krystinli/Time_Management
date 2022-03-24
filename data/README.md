@@ -1,7 +1,17 @@
 # Version_Control
 This sheet tracks my updates for benchmarking according to my short term goals 🎯. The actual hours are meaningless without the comparison to benchmark hours. 
-- For example, if I decided to lose weight which requires more workout 🏋️‍♀️ than normal, I would raise the hours for `self-care` to include that expectation
+- For example, if I decided to lose weight which requires more workout 🏋️‍♀️ I would raise the hours for `self-care` to reflet that
 - To keep a healthy balance, I would reduce hours in some other area to make the goal more realistic 
+
+### 📆 Update on `2022-03-22` 💻
+- Increase work and dev hours
+- Same total hours
+
+```py
+    weekday_work_exp=0.5,
+    weekday_dev_exp=0.5,
+    weekday_care_exp=0.5,
+```
 
 ### 📆 Update on `2022-02-26`
 - Reduce work and dev hours
