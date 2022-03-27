@@ -49,7 +49,9 @@ def plot_body_mind():
     data=[["Week 1",0,1,1,1,0,1,0,],
           ["Week 2",1,1,0,0,1,0,0,],
           ["Week 3",1,0,0,1,0,0,1,],
-          ["Week 4",1,0,0,0,0,0,1,]] # this week
+          ["Week 4",1,0,0,0,0,0,1,],
+          ["Week 5",0,0,0,0,0,0,0,],
+          ] # this week
 
     # convert above data into pd df
     df=pd.DataFrame(
@@ -82,7 +84,9 @@ def plot_self_control():
     data=[["Week 1",0,0,1,2,1,0,0,],
           ["Week 2",0,4,0,0,0,0,0,],
           ["Week 3",0,0,0,0,1,0,0,],
-          ["Week 4",0,1,0,0,0,0,0,]] # this week
+          ["Week 4",0,1,0,0,0,0,0,],
+          ["Week 5",0,0,0,0,0,0,0,],
+          ] # this week
 
     # convert above data into pd df
     df=pd.DataFrame(
