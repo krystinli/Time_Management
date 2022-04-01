@@ -38,7 +38,7 @@ def plot_static(
     print("Generated plot for", colname)
 
 
-def plot_body_mind():
+def plot_exercise():
     """
     plot body and mind investment
     (Sub category of of self-care)
@@ -50,7 +50,7 @@ def plot_body_mind():
           ["Week 2",1,1,0,0,1,0,0,],
           ["Week 3",1,0,0,1,0,0,1,],
           ["Week 4",1,0,0,0,0,0,1,],
-          ["Week 5",0,0,0,0,0,0,0,],
+          ["Week 5",0,0,0,0,1,0,0,],
           ] # this week
 
     # convert above data into pd df
