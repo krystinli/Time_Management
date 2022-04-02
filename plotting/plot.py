@@ -50,7 +50,7 @@ def plot_exercise():
           ["Week 2",1,1,0,0,1,0,0,],
           ["Week 3",1,0,0,1,0,0,1,],
           ["Week 4",1,0,0,0,0,0,1,],
-          ["Week 5",0,0,0,0,1,0,0,],
+          ["Week 5",0,0,0,1,1,0,0,],
           ] # this week
 
     # convert above data into pd df
