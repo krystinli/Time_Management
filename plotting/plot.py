@@ -46,12 +46,20 @@ def plot_exercise():
     This month theme: exercise!
     """
     # day of the week
-    data=[["Week 1",0,1,1,1,0,1,0,],
-          ["Week 2",1,1,0,0,1,0,0,],
-          ["Week 3",1,0,0,1,0,0,1,],
-          ["Week 4",1,0,0,0,0,0,1,],
-          ["Week 5",0,0,0,1,1,1,0,],
-          ] # this week
+    data=[["Week 1",0,0,0,0,0,0,0,], # this week
+          ["Week 2",0,0,0,0,0,0,0,],
+          ["Week 3",0,0,0,0,0,0,0,],
+          ["Week 4",0,0,0,0,0,0,0,],
+          ["Week 5",0,0,0,0,0,0,0,],
+          ]
+
+    # # day of the week
+    # data=[["Week 1",0,0,0,0,0,0,0,], # this week
+    #       ["Week 2",0,0,0,0,0,0,0,],
+    #       ["Week 3",0,0,0,0,0,0,0,],
+    #       ["Week 4",0,0,0,0,0,0,0,],
+    #       ["Week 5",0,0,0,0,0,0,0,],
+    #       ]
 
     # convert above data into pd df
     df=pd.DataFrame(
@@ -63,13 +71,13 @@ def plot_exercise():
         y = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
         kind = "bar",
         figsize = (18,8),
-        title = "Mar Workout Breakdown Analysis",
+        title = "Apr Workout Breakdown Analysis",
         stacked = True,
         legend = True,
         colormap = "cool" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
     )
 
-    plt.savefig("img/" + "2022_Mar_Tracking" + ".png")
+    plt.savefig("img/" + "2022_Apr_Tracking" + ".png")
     print("Generated plot for body_mind.")
 
 def plot_self_control():
@@ -81,12 +89,20 @@ def plot_self_control():
         2) Control eating
     """
     # day of the week
-    data=[["Week 1",0,0,1,2,1,0,0,],
-          ["Week 2",0,4,0,0,0,0,0,],
-          ["Week 3",0,0,0,0,1,0,0,],
-          ["Week 4",0,1,0,0,0,0,0,],
+    data=[["Week 1",0,0,0,0,0,0,0,], # this week
+          ["Week 2",0,0,0,0,0,0,0,],
+          ["Week 3",0,0,0,0,0,0,0,],
+          ["Week 4",0,0,0,0,0,0,0,],
           ["Week 5",0,0,0,0,0,0,0,],
-          ] # this week
+          ]
+
+    # # day of the week
+    # data=[["Week 1",0,0,0,0,0,0,0,], # this week
+    #       ["Week 2",0,0,0,0,0,0,0,],
+    #       ["Week 3",0,0,0,0,0,0,0,],
+    #       ["Week 4",0,0,0,0,0,0,0,],
+    #       ["Week 5",0,0,0,0,0,0,0,],
+    #       ]
 
     # convert above data into pd df
     df=pd.DataFrame(
