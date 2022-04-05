@@ -74,7 +74,7 @@ def plot_exercise():
         title = "Apr Workout Breakdown Analysis",
         stacked = True,
         legend = True,
-        colormap = "cool" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
+        colormap = "spring" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
     )
 
     plt.savefig("img/" + "2022_Apr_Tracking" + ".png")
