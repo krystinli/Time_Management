@@ -32,10 +32,8 @@ Exercising, meditation, planning, etc. 🏡 🏃‍♀️
 Additional tracking for this month [here](https://github.com/krystinli/Time_Management/tree/main/Breakdown_Analysis).
 
 ### Workout 🏋️‍♀️
-![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Mar_Tracking.png)
+![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Apr_Tracking.png)
 
-### Mindfullness 🧠
-![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Mar_Tracking2.png)
 
 ## 04_Pipeline
 How are these plots generated? 📊
