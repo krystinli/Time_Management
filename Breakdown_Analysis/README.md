@@ -1,12 +1,14 @@
 # Breakdown_Analysis
 For each month, I want to create a mini-focus on one of the 3 categories and break that one into smaller sub-categories for close monitoring.
 
+## 2022_Apr 📆
+For this month, I want to focus on exercising 🏃‍♀️
+
+### Workout 🏋️‍♀️
+![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Apr_Tracking.png)
+
 ## 2022_Mar 📆
 For this month, I want to focus on exercising 🏃‍♀️
-- **Week 1:** `4/7` for workout, `3/7` for mindfulness
-- **Week 2:** `3/7` for workout, `3/7` for mindfulness 🔽
-- **Week 3:** `3/7` for workout, `1/7` for mindfulness ⏬
-- **Week 4:**
 
 ### Workout 🏋️‍♀️
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Mar_Tracking.png)
