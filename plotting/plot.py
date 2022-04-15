@@ -47,7 +47,7 @@ def plot_exercise():
     """
     # day of the week
     data=[["Week 1",0,1,2,0,1,0,1,],
-          ["Week 2",0,0,1,0,0,0,0,], # this week
+          ["Week 2",0,0,1,2,0,0,0,], # this week
           ["Week 3",0,0,0,0,0,0,0,],
           ["Week 4",0,0,0,0,0,0,0,],
           ["Week 5",0,0,0,0,0,0,0,],
