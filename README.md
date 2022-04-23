@@ -28,11 +28,9 @@ Personal projects, time spent on learnings outside of work 📚, and financial g
 Exercising, meditation, planning, etc. 🏡 🏃‍♀️ 
 ![planning](https://github.com/krystinli/Time_Management/blob/main/img/care_plot.png)
 
-## 03_Breakdown
-Additional tracking for this month [here](https://github.com/krystinli/Time_Management/tree/main/Breakdown_Analysis).
+## 03_Summary
+**Monthly Trends** - a longer term view than the 20 days lookback 
 
-### Workout 🏋️‍♀️
-![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Apr_Tracking.png)
 
 
 ## 04_Pipeline
