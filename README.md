@@ -13,8 +13,11 @@ I set up an expecation for the current monitoring period (outlined [here](https:
 ## 02_Trends 
 **Look back period:** 20 days <br/>
 
-**Total hours** 🎯 spent in all 3 categories: this is an aggregated indicator of my overall performance
+### Total hours 🎯 - Summary
+All 3 categories: this is an aggregated indicator of my overall performance
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/total_plot.png)
+
+![total_monthly](https://github.com/krystinli/Time_Management/blob/main/img/total_plot_monthly.png)
 
 ### Work-Work 💻 - Work related tasks completion
 Meetings and plannings don't count 👀. The idea is actually getting something done ✅
