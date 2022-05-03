@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from datetime import date, timedelta, datetime as dt
 
-
 def plot_month_trend(
         data,
         colname,
@@ -11,14 +10,34 @@ def plot_month_trend(
         img_name,
         months_count = 8,
     ):
+    """Plot bar chart that represents monthly trends of a specific column.
+
+    Parameters
+    ----------
+    data : DataFrame
+        Updated data with the new entires
+    colname : str
+        Name of the column in data being plotted
+    color : str
+        Colour of the bars
+    img_name : str
+        File name of the img saved under img/
+    months_count : str
+        Number of months included in the plot
+
+    Returns
+    -------
+    plot : matplotlib
+        bar chart
     """
-    cut data and group by months
-    plot bar chart
-    """
-    # filter out recent months
+    # create Year-Month column
     data["Year-Month"] = data["Date"].apply(lambda x: x.strftime("%Y-%m"))
+
+    # tramsform df into a monthly aggregate
     monthly_data = data[["Year-Month", colname]].groupby(
         ["Year-Month"]).sum().reset_index().sort_values(["Year-Month"])
+
+    # filter out most recent months
     monthly_data_recent = monthly_data.tail(months_count)
 
     # plot bar chart
@@ -41,7 +60,6 @@ def plot_month_trend(
     )
     plt.savefig("img/" + img_name + ".png")
     print("Generated plot for", img_name)
-
 
 def plot_day_trend(
         data,
@@ -147,15 +165,7 @@ def plot_self_control():
           ["Week 3",0,0,0,0,0,0,0,],
           ["Week 4",0,0,0,0,0,0,0,],
           ["Week 5",0,0,0,0,0,0,0,],
-          ]
-
-    # # day of the week
-    # data=[["Week 1",0,0,0,0,0,0,0,], # this week
-    #       ["Week 2",0,0,0,0,0,0,0,],
-    #       ["Week 3",0,0,0,0,0,0,0,],
-    #       ["Week 4",0,0,0,0,0,0,0,],
-    #       ["Week 5",0,0,0,0,0,0,0,],
-    #       ]
+         ]
 
     # convert above data into pd df
     df=pd.DataFrame(
