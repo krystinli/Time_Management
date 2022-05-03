@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from datetime import date, timedelta, datetime as dt
 
 
-def plot_monthly_trend(
+def plot_month_trend(
         data,
         colname,
         color,
@@ -27,7 +27,7 @@ def plot_monthly_trend(
 
     bars = ax.bar(
         monthly_data_recent["Year-Month"], # x-axis
-        monthly_data_recent["Total"], # y-axis
+        monthly_data_recent[colname], # y-axis
         color = color,
     )
     ax.set(
