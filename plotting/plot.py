@@ -7,8 +7,9 @@ from datetime import date, timedelta, datetime as dt
 def plot_monthly_trend(
         data,
         colname,
+        color,
         img_name,
-        months_count = 10,
+        months_count = 8,
     ):
     """
     cut data and group by months
@@ -27,18 +28,17 @@ def plot_monthly_trend(
     bars = ax.bar(
         monthly_data_recent["Year-Month"], # x-axis
         monthly_data_recent["Total"], # y-axis
-        color = "cyan",
+        color = color,
     )
     ax.set(
         xlabel = "Year-Month",
         ylabel = "Total Monthly Hours",
-        title = "10 Months Summary",
+        title = "Long Term Trend",
     )
     ax.bar_label(
         bars,
         fontsize = 14,
     )
-
     plt.savefig("img/" + img_name + ".png")
     print("Generated plot for", img_name)
 
