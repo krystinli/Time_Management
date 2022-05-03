@@ -33,7 +33,7 @@ def plot_month_trend(
     ax.set(
         xlabel = "Year-Month",
         ylabel = "Total Monthly Hours",
-        title = "Long Term Trend",
+        title = img_name,
     )
     ax.bar_label(
         bars,
