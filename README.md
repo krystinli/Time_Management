@@ -11,7 +11,6 @@ I set up an expecation for the current monitoring period (outlined [here](https:
 ![img](https://getlighthouse.com/blog/wp-content/uploads/2016/03/dilbert_career_path.png)
 
 ## 02_Trends 
-**Look back period:** 20 days <br/>
 
 ### Total hours 🎯 - Summary
 All 3 categories: this is an aggregated indicator of my overall performance
