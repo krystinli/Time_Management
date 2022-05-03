@@ -1,33 +1,86 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from datetime import date, timedelta, datetime as dt
 
-def plot_static(
+
+def plot_monthly_trend(
+        data,
+        colname,
+        img_name,
+        months_count = 10,
+    ):
+    """
+    cut data and group by months
+    plot bar chart
+    """
+    # filter out recent months
+    data["Year-Month"] = data["Date"].apply(lambda x: x.strftime("%Y-%m"))
+    monthly_data = data[["Year-Month", colname]].groupby(
+        ["Year-Month"]).sum().reset_index().sort_values(["Year-Month"])
+    monthly_data_recent = monthly_data.tail(months_count)
+
+    # plot bar chart
+    fig, ax = plt.subplots()
+    fig.set_size_inches(18, 5) # img size
+
+    bars = ax.bar(
+        monthly_data_recent["Year-Month"], # x-axis
+        monthly_data_recent["Total"], # y-axis
+        color = "cyan",
+    )
+    ax.set(
+        xlabel = "Year-Month",
+        ylabel = "Total Monthly Hours",
+        title = "10 Months Summary",
+    )
+    ax.bar_label(
+        bars,
+        fontsize = 14,
+    )
+
+    plt.savefig("img/" + img_name + ".png")
+    print("Generated plot for", img_name)
+
+
+def plot_day_trend(
         data,
         colname,
         color,
         img_name,
         target_low, # benchmark
-        target_high=0
+        target_high = 0,
+        days_count = 20,
     ):
     """
+    cut data
     plot column
-    save it under img
+    save it under /img
     """
+    # filter out recent days data
+    data = data[
+        data.Date >= (date.today() - timedelta(days=days_count)).strftime("%Y-%m-%d")].copy()
+    data.set_index("Date", inplace=True)
+
+    # create a static plot with matplotlib
     fig, ax = plt.subplots()
     fig.set_size_inches(18, 5) # img size
 
-    ax.plot(colname,
+    ax.plot(
+        colname,
         data = data,
         color = "black",
         linewidth = 1,
         marker = 'o',
         markeredgecolor = color,
-        markersize = 8,)
+        markersize = 8,
+    )
 
-    ax.set(xlabel = "Date",
-           ylabel = "Performance",
-           title = colname)
+    ax.set(
+        xlabel = "Date",
+        ylabel = "Performance",
+        title = colname,
+    )
 
     # target line
     plt.axhline(y=target_low, c='black', linestyle='--', linewidth=2)
@@ -49,7 +102,7 @@ def plot_exercise():
     data=[["Week 1",0,1,2,0,1,0,1,],
           ["Week 2",0,0,1,2,1,0,1,],
           ["Week 3",0,1,0,1,0,1,0,],
-          ["Week 4",1,0,1,0,0,0,0,], # this week
+          ["Week 4",1,0,1,0,1,0,1,], # this week
           ["Week 5",0,0,0,0,0,0,0,],
           ]
 
