@@ -70,10 +70,29 @@ def plot_day_trend(
         target_high = 0,
         days_count = 20,
     ):
-    """
-    cut data
-    plot column
-    save it under /img
+    """Plot line chart that represents daily trends of a specific column.
+
+    Parameters
+    ----------
+    data : DataFrame
+        Updated data with the new entires
+    colname : str
+        Name of the column in data being plotted
+    color : str
+        Colour of the dots
+    img_name : str
+        File name of the img saved under img/
+    target_low : int
+        Benchmark repesented by a dotted line
+    target_high : int
+        Benchmark repesented by a dotted line
+    days_count : str
+        Number of days included in the plot
+
+    Returns
+    -------
+    plot : matplotlib
+        line chart
     """
     # filter out recent days data
     data = data[

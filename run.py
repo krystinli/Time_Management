@@ -67,7 +67,7 @@ def update_data(data):
             "Development" : 0,
             "Self-Care" : 0,
         },
-        ignore_index=True,)
+        ignore_index = True,)
 
     # export updated data
     data.fillna(0).to_csv("data/data2.csv", index=False)
@@ -103,19 +103,19 @@ def transform_data(
 
     # scaled metrics
     data["Work_Scaled"] = np.where(
-        (data["Day"] == "Saturday") | (data["Day"]=="Sunday"),
+        (data["Day"] == "Saturday") | (data["Day"] == "Sunday"),
     data["Work"] - weekend_work_exp,
     data["Work"] - weekday_work_exp,
     )
 
     data["Dev_Scaled"] = np.where(
-        (data["Day"]=="Saturday") | (data["Day"]=="Sunday"),
+        (data["Day"] == "Saturday") | (data["Day"] == "Sunday"),
     data["Development"] - weekend_dev_exp,
     data["Development"] - weekday_dev_exp,
     )
 
     data["Care_Scaled"] = np.where(
-        (data["Day"]=="Saturday") | (data["Day"]=="Sunday"),
+        (data["Day"] == "Saturday") | (data["Day"] == "Sunday"),
     data["Self-Care"] - weekend_care_exp,
     data["Self-Care"] - weekday_care_exp,
     )
@@ -154,7 +154,7 @@ def main():
     plot_day_trend(clean_data, "Total", "yellow", "total_plot", 1.5) # fix num
     plot_month_trend(clean_data, "Total", "yellow", "total_plot_monthly")
 
-    # others
+    # Others
     plot_exercise()
     plot_self_control()
 
