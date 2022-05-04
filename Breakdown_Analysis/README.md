@@ -1,4 +1,8 @@
-# Breakdown_Analysis
+# 00_Month_Trends
+
+
+
+# 01_Current_Goal
 For each month, I want to create a mini-focus on one of the 3 categories and break that one into smaller sub-categories for close monitoring.
 
 ## 2022_Apr 📆
