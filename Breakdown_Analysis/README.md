@@ -4,16 +4,13 @@ For each month, I want to create a mini-focus on one of the 3 categories and bre
 ## 2022_Apr 📆
 For this month, I want to focus on exercising 🏃‍♀️
 
-### Workout 🏋️‍♀️
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Apr_Tracking.png)
 
 ## 2022_Mar 📆
 For this month, I want to focus on exercising 🏃‍♀️
 
-### Workout 🏋️‍♀️
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Mar_Tracking.png)
 
-### Discipline 🚧
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Mar_Tracking2.png)
 
 ## 2022_Feb 📆
