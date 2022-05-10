@@ -2,6 +2,9 @@
 
 ## 2022_May 📆
 For this month, I want to focus on exercising 🏃‍♀️
+- Week 1: `2/7` - not doing well
+- Week 2: `/7`
+
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_May_Tracking.png)
 
 ## 2022_Apr 📆
