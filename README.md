@@ -4,7 +4,7 @@
 This repo is designed to track my time management in these 3 areas: **work, development, and self-care**. A good balance in these 3 areas can help achiving the most optimal outcome. Once you understand that habits can change, you have the freedom and the responsibility to remake them.
 
 ## 01_How does it work?
-I set up an expecation for the current monitoring period (outlined [here](https://github.com/krystinli/Time_Management/blob/main/run.py#L69-L75)) and then update hours spent with my actual performance of the day. The embedded logic computes a performance rating by comparing my goal vs. my actual performance. A positive rating means I'm hitting the target; a negative rating means I did not. 
+I set up an expecation for the current monitoring period (outlined [here](https://github.com/krystinli/Time_Management/blob/main/run.py#L77-L86)) and then update hours spent with my actual performance of the day. The embedded logic computes a performance rating by comparing my goal vs. my actual performance. A positive rating means I'm hitting the target; a negative rating means I did not. 
 - **Performance rating:** `Performance = Expected Hours - Actual Hours`
 - **Overall goal:** To meet my target consistenly 📈
 
