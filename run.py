@@ -5,8 +5,7 @@ from datetime import date, timedelta, datetime as dt
 from plotting.plot import (
         plot_month_trend,
         plot_day_trend,
-        plot_exercise,
-        plot_self_control
+        plot_weekly_stacked_bar
     )
 
 def import_data():
@@ -155,8 +154,7 @@ def main():
     plot_month_trend(clean_data, "Total", "yellow", "total_plot_monthly")
 
     # Others
-    plot_exercise()
-    # plot_self_control()
+    plot_weekly_stacked_bar()
 
 if __name__ == "__main__":
     main()
