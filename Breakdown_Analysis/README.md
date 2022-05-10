@@ -1,21 +1,16 @@
 # Month Trends 📊
 
-
-
-# Current Goal 🎯
-For each month, I want to create a mini-focus on one of the 3 categories and break that one into smaller sub-categories for close monitoring.
+## 2022_May 📆
+For this month, I want to focus on exercising 🏃‍♀️
+![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_May_Tracking.png)
 
 ## 2022_Apr 📆
 For this month, I want to focus on exercising 🏃‍♀️
-
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Apr_Tracking.png)
 
 ## 2022_Mar 📆
 For this month, I want to focus on exercising 🏃‍♀️
-
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Mar_Tracking.png)
-
-![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Mar_Tracking2.png)
 
 ## 2022_Feb 📆
 For this month, I want to focus on exercising 🏃‍♀️
