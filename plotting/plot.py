@@ -6,7 +6,8 @@ from datetime import date, timedelta, datetime as dt
 def plot_month_trend(
         data,
         colname,
-        color,
+        color1,
+        color2,
         img_name,
         months_count = 8,
     ):
@@ -18,8 +19,10 @@ def plot_month_trend(
         Updated data with the new entires
     colname : str
         Name of the column in data being plotted
-    color : str
-        Colour of the bars
+    color1 : str
+        Colour of the bars before equal 2022-02
+    color2 : str
+        Colour of the bars after 2022-02
     img_name : str
         File name of the img saved under img/
     months_count : str
@@ -44,18 +47,37 @@ def plot_month_trend(
     fig, ax = plt.subplots()
     fig.set_size_inches(18, 5) # img size
 
-    bars = ax.bar(
-        monthly_data_recent["Year-Month"], # x-axis
-        monthly_data_recent[colname], # y-axis
-        color = color,
+    # conditional colour
+    x = monthly_data_recent["Year-Month"]
+    y = monthly_data_recent[colname]
+
+    mask1 = x <= "2022-02"
+    mask2 = x > "2022-02"
+
+    # plt.bar
+    bars1 = ax.bar(
+        x[mask1],
+        y[mask1],
+        color = color1,
     )
+    bars2 = ax.bar(
+        x[mask2],
+        y[mask2],
+        color = color2,
+    )
+
+    # labels
     ax.set(
         xlabel = "Year-Month",
         ylabel = "Total Monthly Hours",
         title = img_name,
     )
     ax.bar_label(
-        bars,
+        bars1,
+        fontsize = 14,
+    )
+    ax.bar_label(
+        bars2,
         fontsize = 14,
     )
     plt.savefig("img/" + img_name + ".png")

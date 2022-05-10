@@ -136,22 +136,23 @@ def main():
     print("-----------------------------------")
 
     # 2) plotting
+    # colours: https://matplotlib.org/3.5.0/_images/sphx_glr_named_colors_003_2_0x.png
 
     # Work
     plot_day_trend(clean_data, "Work_Scaled", "blue", "work_plot", 0)
-    plot_month_trend(clean_data, "Work", "cyan", "work_plot_monthly")
+    plot_month_trend(clean_data, "Work", "steelblue", "deepskyblue", "work_plot_monthly")
 
     # Dev
     plot_day_trend(clean_data, "Dev_Scaled", "red", "dev_plot", 0)
-    plot_month_trend(clean_data, "Development", "grey", "dev_plot_monthly")
+    plot_month_trend(clean_data, "Development", "darkseagreen", "palegreen", "dev_plot_monthly")
 
     # Care
     plot_day_trend(clean_data, "Care_Scaled", "green", "care_plot", 0)
-    plot_month_trend(clean_data, "Self-Care", "pink", "care_plot_monthly")
+    plot_month_trend(clean_data, "Self-Care", "palevioletred", "deeppink", "care_plot_monthly")
 
     # Total
     plot_day_trend(clean_data, "Total", "yellow", "total_plot", 1.5) # fix num
-    plot_month_trend(clean_data, "Total", "yellow", "total_plot_monthly")
+    plot_month_trend(clean_data, "Total", "goldenrod", "gold", "total_plot_monthly")
 
     # Others
     plot_weekly_stacked_bar()
