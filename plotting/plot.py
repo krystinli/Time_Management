@@ -168,7 +168,7 @@ def plot_weekly_stacked_bar():
         title = "May Workout Breakdown Analysis",
         stacked = True,
         legend = True,
-        colormap = "spring" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
+        colormap = "Pastel1" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
     )
 
     plt.savefig("img/" + "2022_May_Tracking" + ".png")
