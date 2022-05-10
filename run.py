@@ -156,7 +156,7 @@ def main():
 
     # Others
     plot_exercise()
-    plot_self_control()
+    # plot_self_control()
 
 if __name__ == "__main__":
     main()

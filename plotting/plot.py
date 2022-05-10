@@ -136,12 +136,12 @@ def plot_exercise():
     This month theme: exercise!
     """
     # day of the week
-    data=[["Week 1",0,1,2,0,1,0,1,],
-          ["Week 2",0,0,1,2,1,0,1,],
-          ["Week 3",0,1,0,1,0,1,0,],
-          ["Week 4",1,0,1,0,1,0,1,], # this week
+    data=[["Week 1",0,0,1,1,0,0,0,], # this week
+          ["Week 2",0,0,0,0,0,0,0,],
+          ["Week 3",0,0,0,0,0,0,0,],
+          ["Week 4",0,0,0,0,0,0,0,],
           ["Week 5",0,0,0,0,0,0,0,],
-          ]
+         ]
 
     # # day of the week
     # data=[["Week 1",0,0,0,0,0,0,0,], # this week
@@ -167,7 +167,7 @@ def plot_exercise():
         colormap = "spring" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
     )
 
-    plt.savefig("img/" + "2022_Apr_Tracking" + ".png")
+    plt.savefig("img/" + "2022_May_Tracking" + ".png")
     print("Generated plot for body_mind.")
 
 def plot_self_control():
