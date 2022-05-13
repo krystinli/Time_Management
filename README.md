@@ -1,7 +1,7 @@
 # Time_Management
 > Goals are good for setting a direction, but systems are best for making progress.
 
-This repo is designed to track my time management in these 3 areas: **work, development, and self-care**. A good balance in these 3 areas can help achiving the most optimal outcome. Once you understand that habits can change, you have the freedom and the responsibility to remake them.
+This repo is designed to track my time spent in 3 areas: **work, development, and self-care**. A healthy balance in these 3 areas can help achiving the most optimal outcome. Once you understand that habits can change, you have the freedom and the responsibility to remake them.
 
 ## 01_How does it work?
 I set up an expecation for the current monitoring period (outlined [here](https://github.com/krystinli/Time_Management/blob/main/run.py#L77-L86)) and then update hours spent with my actual performance of the day. The embedded logic computes a performance rating by comparing my goal vs. my actual performance. A positive rating means I'm hitting the target; a negative rating means I did not. 
