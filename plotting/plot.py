@@ -163,8 +163,8 @@ def plot_weekly_stacked_bar():
     """
     # day of the week
     data=[["Week 1",0,0,1,1,0,0,0,],
-          ["Week 2",1,1,1,0,0,0,0,], # this week
-          ["Week 3",0,0,0,0,0,0,0,],
+          ["Week 2",1,1,1,0,0,0,0,],
+          ["Week 3",0,0,0,0,0,0,0,], # this week
           ["Week 4",0,0,0,0,0,0,0,],
           ["Week 5",0,0,0,0,0,0,0,],
          ]
@@ -178,20 +178,27 @@ def plot_weekly_stacked_bar():
     #       ]
 
     # convert above data into pd df
-    df=pd.DataFrame(
+    df = pd.DataFrame(
         data,
         columns=["Week of the Month","Mon","Tue","Wed","Thu","Fri","Sat","Sun"])
 
-    df.plot(
-        x = "Week of the Month",
-        y = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
-        kind = "bar",
-        figsize = (18,8),
-        title = "May Workout Breakdown Analysis",
-        stacked = True,
-        legend = True,
-        colormap = "Pastel1" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
-    )
+    df["Total"] = df.Mon + df.Tue + df.Wed + df.Thu + df.Fri + df.Sat + df.Sun
 
+    # bar plot
+    fig, ax = plt.subplots()
+    bar1 = ax.bar(
+        df["Week of the Month"],
+        df["Total"],
+        color = "pink",
+    )
+    ax.bar_label(
+        bar1,
+        fontsize = 12,
+    )
+    ax.set(
+        xlabel = "Week of the Month",
+        ylabel = "Num of Workouts",
+        title = "Exercise Tracking",
+    )
     plt.savefig("img/" + "2022_May_Tracking" + ".png")
     print("Generated plot for exercising.")
