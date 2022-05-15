@@ -33,6 +33,7 @@ Exercising, meditation, planning, etc. 🏡 🏃‍♀️
 ![planning](https://github.com/krystinli/Time_Management/blob/main/img/care_plot.png)
 
 **Exercising** 🏋️‍♀️
+
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_May_Tracking.png)
 
 ## 03_Monthly_Trends
