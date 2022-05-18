@@ -164,7 +164,7 @@ def plot_weekly_stacked_bar():
     # day of the week
     data=[["Week 1",0,0,1,1,0,0,0,],
           ["Week 2",1,1,1,0,0,0,0,],
-          ["Week 3",0,0,0,0,0,0,0,], # this week
+          ["Week 3",1,1,0,0,0,0,0,], # this week
           ["Week 4",0,0,0,0,0,0,0,],
           ["Week 5",0,0,0,0,0,0,0,],
          ]
