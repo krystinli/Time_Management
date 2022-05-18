@@ -32,17 +32,12 @@ Personal projects, time spent on learnings outside of work 📚, and financial g
 Exercising, meditation, planning, etc. 🏡 🏃‍♀️ 
 ![planning](https://github.com/krystinli/Time_Management/blob/main/img/care_plot.png)
 
-**Exercising** 🏋️‍♀️
-
-![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_May_Tracking.png)
-
 ## 03_Monthly_Trends
 ![work_monthly](https://github.com/krystinli/Time_Management/blob/main/img/work_plot_monthly.png)
 
 ![dev_monthly](https://github.com/krystinli/Time_Management/blob/main/img/dev_plot_monthly.png)
 
 ![care_monthly](https://github.com/krystinli/Time_Management/blob/main/img/care_plot_monthly.png)
-
 
 ## 04_Pipeline
 How are these plots generated? 📊
