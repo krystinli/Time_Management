@@ -9,7 +9,7 @@ from plotting.plot import (
     )
 
 def import_data():
-    """ Read data from csv. Prints summary stats of the current dataset and a
+    """Read data from csv. Prints summary stats of the current dataset and a
     cute giraffe ascii art.
 
     Parameters
@@ -58,15 +58,15 @@ def update_data(data):
 
     while max_date <= today:
         max_date = max_date + timedelta(days=1)
-        data = data.append(
-        {
-            "Date" : max_date.strftime("%Y-%m-%d"),
-            "Day" : max_date.strftime('%A'), # day of the week
-            "Work" : 0,
-            "Development" : 0,
-            "Self-Care" : 0,
-        },
-        ignore_index = True,)
+        data = pd.concat(
+            data,
+            {
+                "Date" : max_date.strftime("%Y-%m-%d"),
+                "Day" : max_date.strftime('%A'), # day of the week
+                "Work" : 0,
+                "Development" : 0,
+                "Self-Care" : 0,
+            },)
 
     # export updated data
     data.fillna(0).to_csv("data/data2.csv", index=False)
