@@ -1,5 +1,5 @@
 # Month Trends 📊
-
+**Weights Trend**
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/weight_trend.png)
 
 ## 2022_June 📆
