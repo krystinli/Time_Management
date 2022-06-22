@@ -2,6 +2,26 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import date, timedelta, datetime as dt
+import plotly.express as px
+import os
+
+def plot_weight_trend():
+    """Plot weight trend
+    """
+    df = pd.DataFrame(
+        np.array([
+            ["2022-06-22", 53],
+            ["2022-06-01", 54],
+            ]),
+        columns = ["Date", "Weights"],)
+
+    fig = px.line(
+        df,
+        x = "Date",
+        y = "Weights",
+    )
+    fig.write_image("img/weight_trend.png")
+    print("Generated plot for weight_trend.")
 
 def plot_month_trend(
         data,
