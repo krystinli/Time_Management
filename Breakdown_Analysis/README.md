@@ -1,5 +1,7 @@
 # Month Trends 📊
 
+![img](https://github.com/krystinli/Time_Management/blob/main/img/weight_trend.png)
+
 ## 2022_June 📆
 For this month, I want to focus on exercising and weight loss 🏃‍♀️
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_June_Tracking.png)
