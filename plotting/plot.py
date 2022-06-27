@@ -169,7 +169,6 @@ def plot_day_trend(
     plt.savefig("img/" + img_name + ".png")
     print("Generated plot for", colname)
 
-
 def plot_weekly_stacked_bar():
     """Plot bar chart that represents weekly exercise record of the month.
 
