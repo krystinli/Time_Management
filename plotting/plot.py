@@ -181,12 +181,12 @@ def plot_weekly_stacked_bar():
         stacked bar chart
     """
     # day of the week
-    data=[["Week 1",0,0,1,1,0,0,0,],
-          ["Week 2",1,1,1,0,0,0,0,],
-          ["Week 3",1,1,0,1,0,0,0,],
-          ["Week 4",1,0,0,1,0,0,0,], # this week
-          ["Week 5",0,0,0,0,0,0,0,],
-         ]
+    data=[["Week 1",0,0,0,0,0,0,0,],
+          ["Week 2",0,0,0,0,0,0,0,],
+          ["Week 3",0,0,0,0,0,0,0,],
+          ["Week 4",0,0,0,0,0,0,0,],
+          ["Week 5",0,0,0,0,0,0,0,], # this week
+          ]
 
     # # day of the week
     # data=[["Week 1",0,0,0,0,0,0,0,], # this week
@@ -211,5 +211,5 @@ def plot_weekly_stacked_bar():
         legend = True,
         colormap = "Pastel1" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
     )
-    plt.savefig("img/" + "2022_May_Tracking" + ".png")
+    plt.savefig("img/" + "2022_June_Tracking" + ".png")
     print("Generated plot for exercising.")
