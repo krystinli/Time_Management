@@ -2,26 +2,87 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import date, timedelta, datetime as dt
-import plotly.express as px
 import os
 
 def plot_weight_trend():
     """Plot weight trend
     """
-    df = pd.DataFrame(
+    df_weights = pd.DataFrame(
         np.array([
-            ["2022-06-22", 53],
-            ["2022-06-01", 54],
+            ["2022-05-01", 64],
+            ["2022-06-01", 64],
+            ["2022-06-22", 63],
+            ["2022-06-28", 63],
             ]),
         columns = ["Date", "Weights"],)
 
-    fig = px.line(
-        df,
-        x = "Date",
-        y = "Weights",
+    df_weights["Date"] = pd.to_datetime(df_weights["Date"])
+    df_weights.set_index("Date", inplace = True)
+
+    # matplotlib
+    fig, ax = plt.subplots()
+    fig.set_size_inches(18, 5) # img size
+
+    ax.plot(
+        "Weights",
+        data = df_weights,
+        linewidth = 1,
+        marker = 'o',
+        markersize = 8,
     )
-    fig.write_image("img/weight_trend.png")
+    ax.set(
+        xlabel = "Date",
+        ylabel = "Weights",
+        title = "Weights Trend",
+    )
+    plt.gca().invert_yaxis()
+    plt.savefig("img/" + "weight_trend" + ".png")
     print("Generated plot for weight_trend.")
+
+def plot_weekly_stacked_bar():
+    """Plot bar chart that represents weekly exercise record of the month.
+
+    Parameters
+    ----------
+
+    Returns
+    -------
+    plot : matplotlib
+        stacked bar chart
+    """
+    # day of the week
+    data=[["Week 1",0,0,0,0,0,0,0,],
+          ["Week 2",0,0,0,0,0,0,0,],
+          ["Week 3",0,0,0,0,0,0,0,],
+          ["Week 4",0,0,0,0,0,0,0,],
+          ["Week 5",1,0,0,0,0,0,0,], # this week
+          ]
+
+    # # day of the week
+    # data=[["Week 1",0,0,0,0,0,0,0,], # this week
+    #       ["Week 2",0,0,0,0,0,0,0,],
+    #       ["Week 3",0,0,0,0,0,0,0,],
+    #       ["Week 4",0,0,0,0,0,0,0,],
+    #       ["Week 5",0,0,0,0,0,0,0,],
+    #       ]
+
+    # convert above data into pd df
+    df = pd.DataFrame(
+        data,
+        columns=["Week of the Month","Mon","Tue","Wed","Thu","Fri","Sat","Sun"])
+
+    df.plot(
+        x = "Week of the Month",
+        y = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+        kind = "bar",
+        figsize = (18,8),
+        title = "May Workout Breakdown Analysis",
+        stacked = True,
+        legend = True,
+        colormap = "Pastel1" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
+    )
+    plt.savefig("img/" + "2022_June_Tracking" + ".png")
+    print("Generated plot for exercising.")
 
 def plot_month_trend(
         data,
@@ -168,48 +229,3 @@ def plot_day_trend(
 
     plt.savefig("img/" + img_name + ".png")
     print("Generated plot for", colname)
-
-def plot_weekly_stacked_bar():
-    """Plot bar chart that represents weekly exercise record of the month.
-
-    Parameters
-    ----------
-
-    Returns
-    -------
-    plot : matplotlib
-        stacked bar chart
-    """
-    # day of the week
-    data=[["Week 1",0,0,0,0,0,0,0,],
-          ["Week 2",0,0,0,0,0,0,0,],
-          ["Week 3",0,0,0,0,0,0,0,],
-          ["Week 4",0,0,0,0,0,0,0,],
-          ["Week 5",0,0,0,0,0,0,0,], # this week
-          ]
-
-    # # day of the week
-    # data=[["Week 1",0,0,0,0,0,0,0,], # this week
-    #       ["Week 2",0,0,0,0,0,0,0,],
-    #       ["Week 3",0,0,0,0,0,0,0,],
-    #       ["Week 4",0,0,0,0,0,0,0,],
-    #       ["Week 5",0,0,0,0,0,0,0,],
-    #       ]
-
-    # convert above data into pd df
-    df = pd.DataFrame(
-        data,
-        columns=["Week of the Month","Mon","Tue","Wed","Thu","Fri","Sat","Sun"])
-
-    df.plot(
-        x = "Week of the Month",
-        y = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
-        kind = "bar",
-        figsize = (18,8),
-        title = "May Workout Breakdown Analysis",
-        stacked = True,
-        legend = True,
-        colormap = "Pastel1" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
-    )
-    plt.savefig("img/" + "2022_June_Tracking" + ".png")
-    print("Generated plot for exercising.")
