@@ -56,7 +56,7 @@ def plot_weekly_stacked_bar():
           ["Week 3",0,0,0,0,0,0,0,],
           ["Week 4",0,0,0,0,0,0,0,],
           ["Week 5",1,0,0,0,0,0,0,], # this week
-          ]
+    ]
 
     # # day of the week
     # data=[["Week 1",0,0,0,0,0,0,0,], # this week
@@ -64,7 +64,7 @@ def plot_weekly_stacked_bar():
     #       ["Week 3",0,0,0,0,0,0,0,],
     #       ["Week 4",0,0,0,0,0,0,0,],
     #       ["Week 5",0,0,0,0,0,0,0,],
-    #       ]
+    # ]
 
     # convert above data into pd df
     df = pd.DataFrame(
