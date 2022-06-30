@@ -55,7 +55,7 @@ def plot_weekly_stacked_bar():
           ["Week 2",0,0,0,0,0,0,0,],
           ["Week 3",0,0,0,0,0,0,0,],
           ["Week 4",0,0,0,0,0,0,0,],
-          ["Week 5",1,0,0,0,0,0,0,], # this week
+          ["Week 5",1,1,1,0,0,0,0,], # this week
     ]
 
     # # day of the week
