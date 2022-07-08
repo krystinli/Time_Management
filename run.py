@@ -5,7 +5,7 @@ from datetime import date, timedelta, datetime as dt
 from plotting.plot import (
         plot_month_trend,
         plot_day_trend,
-        plot_weekly_stacked_bar,
+        plot_stacked_bar,
         plot_weight_trend,
     )
 
@@ -156,7 +156,7 @@ def main():
     plot_month_trend(clean_data, "Total", "goldenrod", "gold", "total_plot_monthly")
 
     # Others
-    plot_weekly_stacked_bar()
+    plot_stacked_bar()
     plot_weight_trend()
 
 if __name__ == "__main__":
