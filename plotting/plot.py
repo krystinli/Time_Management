@@ -7,6 +7,7 @@ import os
 def plot_weight_trend():
     """Plot weight trend
     """
+    # data1
     df_weights = pd.DataFrame(
         np.array([
             ["2022-05-01", 64],
@@ -40,7 +41,7 @@ def plot_weight_trend():
     plt.savefig("img/" + "weight_trend" + ".png")
     print("Generated plot for weight_trend.")
 
-def plot_weekly_stacked_bar():
+def plot_stacked_bar():
     """Plot bar chart that represents weekly exercise record of the month.
 
     Parameters
@@ -52,38 +53,67 @@ def plot_weekly_stacked_bar():
         stacked bar chart
     """
     # day of the week
-    data=[["Week 1",0,0,1,0,0,0,0,], # this week
-          ["Week 2",0,0,0,0,0,0,0,],
-          ["Week 3",0,0,0,0,0,0,0,],
-          ["Week 4",0,0,0,0,0,0,0,],
-          ["Week 5",0,0,0,0,0,0,0,],
+    data = [
+        ["Week 1",0,0,1,1,0,0,0,],
+        ["Week 2",0,1,0,1,0,1,1,], # this week
+        ["Week 3",0,0,0,0,0,0,0,],
+        ["Week 4",0,0,0,0,0,0,0,],
+        ["Week 5",0,0,0,0,0,0,0,],
     ]
-
-    # # day of the week
-    # data=[["Week 1",0,0,0,0,0,0,0,], # this week
-    #       ["Week 2",0,0,0,0,0,0,0,],
-    #       ["Week 3",0,0,0,0,0,0,0,],
-    #       ["Week 4",0,0,0,0,0,0,0,],
-    #       ["Week 5",0,0,0,0,0,0,0,],
-    # ]
 
     # convert above data into pd df
     df = pd.DataFrame(
         data,
-        columns=["Week of the Month","Mon","Tue","Wed","Thu","Fri","Sat","Sun"])
+        columns = [
+            "Week of the Month",
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun"],
+        )
 
+    data_leetcode = [
+        ["June_2022",62,15,0],
+        ["July_2022",63,15,0], # this month
+        ["Aug_2022",0,0,0,],
+        ["Sep_2022",0,0,0,],
+        ["Oct_2022",0,0,0,],
+        ["Nov_2022",0,0,0,],
+    ]
+
+    df_leetcode = pd.DataFrame(
+        data_leetcode,
+        columns = ["Month", "Easy", "Medium", "Hard"],)
+
+    # plot exercise
     df.plot(
         x = "Week of the Month",
         y = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
         kind = "bar",
         figsize = (18,8),
-        title = "May Workout Breakdown Analysis",
+        title = "Workout Breakdown Analysis",
         stacked = True,
         legend = True,
         colormap = "Pastel1" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
     )
     plt.savefig("img/" + "2022_July_Tracking" + ".png")
-    print("Generated plot for exercising.")
+
+    # plot leetcode
+    df_leetcode.plot(
+        x = "Month",
+        y = ["Easy", "Medium", "Hard"],
+        kind = "bar",
+        figsize = (18,8),
+        title = "Leetcode Progress",
+        stacked = True,
+        legend = True,
+        colormap = "Pastel2" # https://matplotlib.org/stable/tutorials/colors/colormaps.html
+    )
+    plt.savefig("img/" + "2022_Leetcode_Tracking" + ".png")
+    print("Generated plot for exercising and leetcode.")
 
 def plot_month_trend(
         data,
