@@ -6,9 +6,6 @@ Actions tracked:
   - [ ] [[w3schools]](https://www.w3schools.com/python/)
   - [x] [[python_basics]](https://github.com/krystinli/Legoland/blob/main/python/python_basics.md#os)
 
-### Leetcode Progress
-![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Leetcode_Tracking.png)
-
 ## July_Weekly_Exercise 
 Leading Indicator:
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_July_Tracking.png)
@@ -17,3 +14,5 @@ Leading Indicator:
 Lagging Indicator:
 ![img](https://github.com/krystinli/Time_Management/blob/main/img/weight_trend.png)
 
+### Leetcode Progress
+![img](https://github.com/krystinli/Time_Management/blob/main/img/2022_Leetcode_Tracking.png)
