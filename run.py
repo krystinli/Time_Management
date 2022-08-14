@@ -77,12 +77,12 @@ def update_data(data):
 def transform_data(
     data,
     # current benchmark setting for weekday
-    weekday_work_exp=0.5,
-    weekday_dev_exp=0.5,
-    weekday_care_exp=0.5,
+    weekday_work_exp=5,
+    weekday_dev_exp=0,
+    weekday_care_exp=0,
     # current benchmark setting for weekend
-    weekend_work_exp=0,
-    weekend_dev_exp=0.25,
+    weekend_work_exp=0.25,
+    weekend_dev_exp=0,
     weekend_care_exp=1,
     ):
     """Transform the Y-axis value from hours to a performance scale:
