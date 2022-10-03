@@ -163,8 +163,8 @@ def plot_month_trend(
     x = monthly_data_recent["Year-Month"]
     y = monthly_data_recent[colname]
 
-    mask1 = x <= "2022-01"
-    mask2 = x >= "2022-02"
+    mask1 = x <= "2022-07"
+    mask2 = x >= "2022-08" # change month
 
     # plt.bar
     bars1 = ax.bar(
