@@ -77,13 +77,13 @@ def update_data(data):
 def transform_data(
     data,
     # current benchmark setting for weekday
-    weekday_work_exp=5,
+    weekday_work_exp=8,
     weekday_dev_exp=0,
     weekday_care_exp=0,
     # current benchmark setting for weekend
-    weekend_work_exp=0.25,
+    weekend_work_exp=2,
     weekend_dev_exp=0,
-    weekend_care_exp=1,
+    weekend_care_exp=2,
     ):
     """Transform the Y-axis value from hours to a performance scale:
     performance = expected hours - actual hours
@@ -99,6 +99,10 @@ def transform_data(
         Updated data with 4 new columns:
         Work_Scaled, Dev_Scaled, Care_Scaled, Total
     """
+    #
+    # for col in ["Work", "Development", "Self-Care"]:
+    #     pd.to_numeric(data[col], errors='ignore')
+
     data["Total"] = data["Work"] + data["Development"] + data["Self-Care"]
 
     # scaled metrics
