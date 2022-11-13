@@ -24,22 +24,22 @@ Sum of all 3 categories: this is an aggregated indicator of my overall performan
 Meetings and plannings don't count 👀. The idea is actually getting something done ✅
 ![work](https://github.com/krystinli/Time_Management/blob/main/img/work_plot.png)
 
+![work_monthly](https://github.com/krystinli/Time_Management/blob/main/img/work_plot_monthly.png)
+
 ### Development 🌳 - Investing in my growth
 Personal projects, time spent on learnings outside of work 📚, and financial growth 💰
 ![coding](https://github.com/krystinli/Time_Management/blob/main/img/dev_plot.png)
+
+![dev_monthly](https://github.com/krystinli/Time_Management/blob/main/img/dev_plot_monthly.png)
 
 ### Self-Care 💟 - Prioritize my well-being
 Exercising, meditation, planning, etc. 🏡 🏃‍♀️ 
 ![planning](https://github.com/krystinli/Time_Management/blob/main/img/care_plot.png)
 
-## 03_Monthly_Trends
-![work_monthly](https://github.com/krystinli/Time_Management/blob/main/img/work_plot_monthly.png)
-
-![dev_monthly](https://github.com/krystinli/Time_Management/blob/main/img/dev_plot_monthly.png)
-
 ![care_monthly](https://github.com/krystinli/Time_Management/blob/main/img/care_plot_monthly.png)
 
-## 04_Pipeline
+
+## 03_Pipeline
 How are these plots generated? 📊
 ```mermaid
 graph LR;
