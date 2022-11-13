@@ -4,43 +4,6 @@ import matplotlib.pyplot as plt
 from datetime import date, timedelta, datetime as dt
 import os
 
-def plot_weight_trend():
-    """Plot weight trend
-    """
-    # data1
-    df_weights = pd.DataFrame(
-        np.array([
-            ["2022-05-01", 64],
-            ["2022-06-01", 64],
-            ["2022-06-22", 63],
-            ["2022-06-28", 63],
-            ["2022-07-06", 64],
-            ]),
-        columns = ["Date", "Weights"],)
-
-    df_weights["Date"] = pd.to_datetime(df_weights["Date"])
-    df_weights.set_index("Date", inplace = True)
-
-    # matplotlib
-    fig, ax = plt.subplots()
-    fig.set_size_inches(18, 5) # img size
-
-    ax.plot(
-        "Weights",
-        data = df_weights,
-        linewidth = 1,
-        marker = 'o',
-        markersize = 8,
-    )
-    ax.set(
-        xlabel = "Date",
-        ylabel = "Weights",
-        title = "Weights Trend",
-    )
-    plt.gca().invert_yaxis()
-    plt.savefig("img/" + "weight_trend" + ".png")
-    print("Generated plot for weight_trend.")
-
 def plot_stacked_bar():
     """Plot bar chart that represents weekly exercise record of the month.
 

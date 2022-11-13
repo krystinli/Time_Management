@@ -6,7 +6,6 @@ from plotting.plot import (
         plot_month_trend,
         plot_day_trend,
         plot_stacked_bar,
-        plot_weight_trend,
     )
 
 def import_data():
@@ -78,11 +77,11 @@ def transform_data(
     data,
     # current benchmark setting for weekday
     weekday_work_exp=8,
-    weekday_dev_exp=0,
-    weekday_care_exp=0,
+    weekday_dev_exp=0.5,
+    weekday_care_exp=0.5,
     # current benchmark setting for weekend
-    weekend_work_exp=2,
-    weekend_dev_exp=0,
+    weekend_work_exp=0,
+    weekend_dev_exp=1,
     weekend_care_exp=2,
     ):
     """Transform the Y-axis value from hours to a performance scale:
@@ -143,25 +142,24 @@ def main():
     # 2) plotting
     # colours: https://matplotlib.org/3.5.0/_images/sphx_glr_named_colors_003_2_0x.png
 
-    # Work
+    # Work_delta
     plot_day_trend(clean_data, "Work_Scaled", "blue", "work_plot", 0)
     plot_month_trend(clean_data, "Work", "steelblue", "deepskyblue", "work_plot_monthly")
 
-    # Dev
+    # Dev_delta
     plot_day_trend(clean_data, "Dev_Scaled", "red", "dev_plot", 0)
     plot_month_trend(clean_data, "Development", "darkseagreen", "palegreen", "dev_plot_monthly")
 
-    # Care
+    # Care_delta
     plot_day_trend(clean_data, "Care_Scaled", "green", "care_plot", 0)
     plot_month_trend(clean_data, "Self-Care", "palevioletred", "deeppink", "care_plot_monthly")
 
-    # Total
-    plot_day_trend(clean_data, "Total", "yellow", "total_plot", 1.5) # fix num
+    # Total_abs
+    plot_day_trend(clean_data, "Total", "yellow", "total_plot", 8) # avg daily expectation
     plot_month_trend(clean_data, "Total", "goldenrod", "gold", "total_plot_monthly")
 
     # Others
     plot_stacked_bar()
-    plot_weight_trend()
 
 if __name__ == "__main__":
     main()
