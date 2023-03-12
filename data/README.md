@@ -3,6 +3,26 @@ This sheet tracks my updates for benchmarking according to my short term goals �
 - For example, if I decided to lose weight which requires more workout 🏋️‍♀️ I would raise the hours for `self-care` to reflet that
 - To keep a healthy balance, I would reduce hours in some other area to make the goal more realistic 
 
+
+### 📆 Update on `2023-03-12`
+Goal of the change:
+- Work mentality
+
+Definition:
+- Work definition no longer includes "work work"
+- Focus on working for myself/family stuff
+
+```py
+    # current benchmark setting for weekday
+    weekday_work_exp=0,
+    weekday_dev_exp=0.5,
+    weekday_care_exp=0.5,
+    # current benchmark setting for weekend
+    weekend_work_exp=0.5,
+    weekend_dev_exp=0.5,
+    weekend_care_exp=2,
+```
+
 ### 📆 Update on `2022-11-13`
 Goal of the change:
 - Work life balance
@@ -16,7 +36,6 @@ Goal of the change:
     weekend_dev_exp=1,
     weekend_care_exp=2,
 ```
-
 
 ### 📆 Update on `2022-10-02`
 Goal of the change:
