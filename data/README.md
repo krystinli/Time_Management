@@ -3,6 +3,24 @@ This sheet tracks my updates for benchmarking according to my short term goals �
 - For example, if I decided to lose weight which requires more workout 🏋️‍♀️ I would raise the hours for `self-care` to reflet that
 - To keep a healthy balance, I would reduce hours in some other area to make the goal more realistic 
 
+### 📆 Update on `2023-04-24`
+Goal of the change: Layoff update
+- Morning: 1.5 hrs
+- Afternoon: 3 hrs
+- Night: 0.5 hr => total 5 hours
+- Weekday 6 hrs <> weekend 3 hrs
+
+```py
+    # current benchmark setting for weekday
+    weekday_work_exp=5,
+    weekday_dev_exp=0.5,
+    weekday_care_exp=0.5,
+    # current benchmark setting for weekend
+    weekend_work_exp=0.5,
+    weekend_dev_exp=0.5,
+    weekend_care_exp=2,
+```
+
 ### 📆 Update on `2023-04-01`
 Goal of the change:
 - Add back work
