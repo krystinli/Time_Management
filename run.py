@@ -76,11 +76,11 @@ def update_data(data):
 def transform_data(
     data,
     # current benchmark setting for weekday
-    weekday_work_exp=8,
+    weekday_work_exp=5,
     weekday_dev_exp=0.5,
     weekday_care_exp=0.5,
     # current benchmark setting for weekend
-    weekend_work_exp=1,
+    weekend_work_exp=0.5,
     weekend_dev_exp=0.5,
     weekend_care_exp=2,
     ):
