@@ -155,7 +155,7 @@ def main():
     plot_month_trend(clean_data, "Self-Care", "palevioletred", "deeppink", "care_plot_monthly")
 
     # Total_abs
-    plot_day_trend(clean_data, "Total", "yellow", "total_plot", 4) # avg daily expectation
+    plot_day_trend(clean_data, "Total", "yellow", "total_plot", 5) # avg daily expectation
     plot_month_trend(clean_data, "Total", "goldenrod", "gold", "total_plot_monthly")
 
     # Others
