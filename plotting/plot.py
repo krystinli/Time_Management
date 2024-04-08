@@ -127,8 +127,8 @@ def plot_month_trend(
     y = monthly_data_recent[colname]
 
     # colour change in plots
-    mask1 = x <= "2023-04"
-    mask2 = x >= "2023-05" # change month
+    mask1 = x <= "2023-12"
+    mask2 = x >= "2024-01" # change month
 
     # plt.bar
     bars1 = ax.bar(
