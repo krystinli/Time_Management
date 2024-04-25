@@ -22,6 +22,7 @@ Sum of all 3 categories: this is an aggregated indicator of my overall performan
 
 ### Work-Work 💻 - Work related tasks completion
 Meetings and plannings don't count 👀. The idea is actually getting something done ✅
+- Avg 4 weeks/month, 50 hrs / week => 200 hrs target 
 ![work](https://github.com/krystinli/Time_Management/blob/main/img/work_plot.png)
 
 ![work_monthly](https://github.com/krystinli/Time_Management/blob/main/img/work_plot_monthly.png)
