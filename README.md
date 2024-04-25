@@ -16,10 +16,10 @@ Every once a while I look at my performance in the past 2 weeks and evaluate the
 
 ### Total hours 📊
 Sum of all 3 categories: this is an aggregated indicator of my overall performance
-- Avg 4 weeks/month, 50 hrs / week => 200 hrs target 🎯
  
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/total_plot.png)
 
+Avg 4 weeks/month, 50 hrs / week => 200 hrs target 🎯
 ![total_monthly](https://github.com/krystinli/Time_Management/blob/main/img/total_plot_monthly.png)
 
 ### Work-Work 💻 - Work related tasks completion
