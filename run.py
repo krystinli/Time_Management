@@ -20,7 +20,20 @@ def import_data():
     data : DataFrame
         Current data before the new update
     """
-    data = pd.read_csv("data/data2.csv")
+    # Get the file path from an environment variable or use the default
+    file_path = os.getenv("DATA_FILE_PATH", "data/data2.csv")
+
+    try:
+        data = pd.read_csv(file_path)
+    except FileNotFoundError:
+        print(f"Error: The file '{file_path}' was not found.")
+        return pd.DataFrame()
+    except pd.errors.EmptyDataError:
+        print(f"Error: The file '{file_path}' is empty.")
+        return pd.DataFrame()
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        return pd.DataFrame()
 
     print("This repo started on:", min(data.Date))
     print("Loaded csv with %d days of data." % (len(data)))
@@ -61,11 +74,11 @@ def update_data(data):
         data = pd.concat([
             data,
             pd.DataFrame([{
-                        "Date" : max_date.strftime("%Y-%m-%d"),
-                        "Day" : max_date.strftime('%A'), # day of the week
-                        "Work" : 0,
-                        "Development" : 0,
-                        "Self-Care" : 0,}])
+                "Date": max_date.strftime("%Y-%m-%d"),
+                "Day": max_date.strftime('%A'),  # day of the week
+                "Work": 0,
+                "Development": 0,
+                "Self-Care": 0,}])
             ])
 
     # export updated data
