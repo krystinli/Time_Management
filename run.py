@@ -81,6 +81,7 @@ def update_data(data):
             "Work": 0,
             "Development": 0,
             "Self-Care": 0,
+            "Others": data["Others"].iloc[-1] if not data["Others"].empty else 0,
         })
         data = pd.concat([data, new_entries], ignore_index=True)
 
