@@ -157,7 +157,7 @@ def main():
     plot_month_trend(clean_data, "Self-Care", "palevioletred", "deeppink", "care_plot_monthly")
 
     plot_day_trend(clean_data, "Total", "yellow", "total_plot", 5)
-    plot_week_trend(clean_data, "Total", "pink", "green", "work_plot_weekly")
+    plot_week_trend(clean_data, "Total", "darkseagreen", "palegreen", "work_plot_weekly")
     plot_month_trend(clean_data, "Total", "goldenrod", "gold", "total_plot_monthly")
 
     plot_stacked_bar()

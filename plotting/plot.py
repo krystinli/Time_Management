@@ -165,7 +165,7 @@ def plot_week_trend(
         color1,
         color2,
         img_name,
-        weeks_count = 5,
+        weeks_count = 8,
     ):
     """Plot bar chart that represents monthly trends of a specific column.
 
@@ -209,8 +209,8 @@ def plot_week_trend(
     y = weekly_data_recent[colname]
 
     # colour change in plots
-    mask1 = x <= "2025-05"
-    mask2 = x > "2025-05"  # change month
+    mask1 = x <= "2025-10"
+    mask2 = x > "2025-10"  # change month
 
     # plt.bar
     bars1 = ax.bar(
