@@ -19,7 +19,7 @@ Sum of all 3 categories: this is an aggregated indicator of my overall performan
  
 ![total](https://github.com/krystinli/Time_Management/blob/main/img/total_plot.png)
 
-![total](https://github.com/krystinli/Time_Management/blob/main/img/total_plot_weekly.png)
+![total](https://github.com/krystinli/Time_Management/blob/main/img/work_plot_weekly.png)
 
 Avg 4 weeks/month, 50 hrs / week => 200 hrs target 🎯
 ![total_monthly](https://github.com/krystinli/Time_Management/blob/main/img/total_plot_monthly.png)
