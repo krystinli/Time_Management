@@ -159,6 +159,88 @@ def plot_month_trend(
     plt.savefig("img/" + img_name + ".png")
     print("Generated plot for", img_name)
 
+def plot_week_trend(
+        data,
+        colname,
+        color1,
+        color2,
+        img_name,
+        weeks_count = 5,
+    ):
+    """Plot bar chart that represents monthly trends of a specific column.
+
+    Parameters
+    ----------
+    data : DataFrame
+        Updated data with the new entires
+    colname : str
+        Name of the column in data being plotted
+    color1 : str
+        Colour of the bars before equal 2022-02
+    color2 : str
+        Colour of the bars after 2022-02
+    img_name : str
+        File name of the img saved under img/
+    months_count : str
+        Number of months included in the plot
+
+    Returns
+    -------
+    plot : matplotlib
+        bar chart
+    """
+    # create Year-Month column
+    # data["Year-Month"] = data["Date"].apply(lambda x: x.strftime("%Y-%m"))
+    data["Year-Month-Week"] = data["Date"].apply(lambda x: x.strftime("%Y-%m") + f"-W{x.isocalendar()[1]}")
+
+    # tramsform df into a monthly aggregate
+    weekly_data = data[["Year-Month-Week", colname]].groupby(
+        ["Year-Month-Week"]).sum().reset_index().sort_values(["Year-Month-Week"])
+
+    # filter out most recent months
+    weekly_data_recent = weekly_data.tail(weeks_count)
+
+    # plot bar chart
+    fig, ax = plt.subplots()
+    fig.set_size_inches(18, 5) # img size
+
+    # conditional colour
+    x = weekly_data_recent["Year-Month-Week"]
+    y = weekly_data_recent[colname]
+
+    # colour change in plots
+    mask1 = x <= "2025-05"
+    mask2 = x > "2025-05"  # change month
+
+    # plt.bar
+    bars1 = ax.bar(
+        x[mask1],
+        y[mask1],
+        color = color1,
+    )
+    bars2 = ax.bar(
+        x[mask2],
+        y[mask2],
+        color = color2,
+    )
+
+    # labels
+    ax.set(
+        xlabel = "Year-Month-Week",
+        ylabel = "Total Weekly Hours",
+        title = img_name,
+    )
+    ax.bar_label(
+        bars1,
+        fontsize = 14,
+    )
+    ax.bar_label(
+        bars2,
+        fontsize = 14,
+    )
+    plt.savefig("img/" + img_name + ".png")
+    print("Generated plot for", img_name)
+
 def plot_day_trend(
         data,
         colname,
