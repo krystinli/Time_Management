@@ -209,8 +209,9 @@ def plot_week_trend(
     y = weekly_data_recent[colname]
 
     # colour change in plots
-    mask1 = x <= "2025-10"
-    mask2 = x > "2025-10"  # change month
+    current_month = date.today().strftime("%Y-%m")
+    mask1 = x <= current_month
+    mask2 = x > current_month
 
     # plt.bar
     bars1 = ax.bar(
