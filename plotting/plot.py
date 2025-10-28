@@ -84,7 +84,7 @@ def plot_month_trend(
         color1,
         color2,
         img_name,
-        months_count = 8,
+        months_count = 12,
     ):
     """Plot bar chart that represents monthly trends of a specific column.
 
