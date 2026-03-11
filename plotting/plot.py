@@ -191,11 +191,11 @@ def plot_week_trend(
     """
     # create Year-Month column
     # data["Year-Month"] = data["Date"].apply(lambda x: x.strftime("%Y-%m"))
-    data["Year-Month-Week"] = data["Date"].apply(lambda x: x.strftime("%Y-%m") + f"-W{x.isocalendar()[1]}")
+    data["Year-Week"] = data["Date"].apply(lambda x: x.strftime("%Y") + f"-{x.isocalendar()[1]}")
 
-    # tramsform df into a monthly aggregate
-    weekly_data = data[["Year-Month-Week", colname]].groupby(
-        ["Year-Month-Week"]).sum().reset_index().sort_values(["Year-Month-Week"])
+    # transform df into a weekly aggregate
+    weekly_data = data[["Year-Week", colname]].groupby(
+        ["Year-Week"]).sum().reset_index().sort_values(["Year-Week"])
 
     # filter out most recent months
     weekly_data_recent = weekly_data.tail(weeks_count)
@@ -205,7 +205,7 @@ def plot_week_trend(
     fig.set_size_inches(18, 5) # img size
 
     # conditional colour
-    x = weekly_data_recent["Year-Month-Week"]
+    x = weekly_data_recent["Year-Week"]
     y = weekly_data_recent[colname]
 
     # colour change in plots
