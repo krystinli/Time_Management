@@ -1,86 +1,86 @@
 ---
 name: daily_time_update
 description: >-
-  Updates Time_Management daily time tracking by appending today’s row to
-  `data2.csv` (asks for your actual Work/Development/Self-Care values while
-  copying `Others` from the last row), running `run.py` to regenerate plots, then committing and
-  pushing changes and opening a PR. Use when the user asks to add “today’s
-  entry” or “update data2.csv daily” for Time_Management.
+  Updates Time_Management time tracking by padding `data2.csv` with placeholder
+  rows for every missing calendar day through today (Work/Development/Self-Care =
+  0, Others copied from the last existing row) so the user can enter real hours
+  in the file or in chat, then runs `run.py`, regenerates plots, commits, pushes,
+  and opens a PR when requested. Use for “today’s entry”, “daily time update”, or
+  “update data2.csv daily” for Time_Management.
 ---
 
 # Daily Time Update (Time_Management)
 
 ## Summary of the workflow
 
-1. Detect today’s date and weekday.
-2. Check the last recorded date in `Time_Management/data/data2.csv`.
-3. If today is missing, append a new CSV row:
-   - Ask the user for the actual `Work/Development/Self-Care` hours for today
-   - `Others` copied from the last existing row
-4. Run `Time_Management/run.py` to pad any missing dates up to today and regenerate plots under `Time_Management/img/`.
-5. Review the diff to ensure only the intended recent rows and plot PNGs changed.
-6. Commit the CSV + updated PNGs, push a branch, and open a PR.
+1. Detect today’s date (local system).
+2. Read `max(Date)` from `Time_Management/data/data2.csv`.
+3. If `max(Date) < today`, append **one row per missing calendar day** from `max(Date)+1` through `today` using **placeholders** (see below). If the user asks to “add rows first so I can type hours”, do **only** this step and stop until they are done editing or say to continue.
+4. After real `Work` / `Development` / `Self-Care` values are set (manual edit or user message), run `Time_Management/run.py` to refresh plots under `Time_Management/img/`.
+5. Review `git diff` so only the intended recent rows and plot PNGs changed.
+6. Commit `data/data2.csv` + updated PNGs, push a branch, open a PR (or give the compare URL if `gh` is missing).
+
+## Placeholder rows (default)
+
+For each missing date `d` through today:
+
+`YYYY-MM-DD,<Weekday>,0.0,0.0,0.0,<Others_last>`
+
+- `<Others_last>` is the `Others` value from the **last data row before the gap** (use the same value for every new row unless the user specifies otherwise).
+- Weekday must match the calendar `d` (`Monday` … `Sunday`).
+
+## After placeholders
+
+- The user fills in actual hours in `data2.csv`, **or** paste them in chat and the agent updates those cells.
+- Then run `python run.py`, verify diffs, commit, push, PR.
+
+## Alternative: chat-first
+
+If the user already provides `Work` / `Development` / `Self-Care` for each missing day, append those values directly and skip placeholders.
 
 ## Step-by-step instructions
 
-### 1) Identify paths and repo
+### 1) Paths
+
 - CSV: `Time_Management/data/data2.csv`
 - Script: `Time_Management/run.py`
-- Plots output: `Time_Management/img/`
+- Plots: `Time_Management/img/`
 
-### 2) Get today + weekday
-- Use the system date (local to the machine running the agent).
+### 2) Gap check
 
-### 3) Check whether today already exists
-- Read the last row from `data2.csv` (by `Date` column) and compare to today.
-- If today exists, do not append a new row; continue to step 4 only if plots are stale.
+- If `max(Date) >= today`, nothing to append; only run `run.py` / commit if plots or data still need refresh.
 
-### 4) Append today’s entry (user’s rule)
-Before appending, request your actual daily record:
+### 3) Append missing days
 
-- `Work` hours for today
-- `Development` hours for today
-- `Self-Care` hours for today
+- Append placeholder rows as above for the full range through today.
+- If multiple days are missing, append **all** of them in one edit (continuous dates).
 
-Append exactly one new row (unless multiple days are missing and you choose to let `run.py` pad them):
+### 4) Plot pipeline
 
-`YYYY-MM-DD,Weekday,<Work>,<Development>,<Self-Care>,<Others_from_last_row>`
+- From `Time_Management/`: `python run.py`
 
-### 5) Run the plot pipeline
-- From `Time_Management/`, run:
-  - `python run.py`
+If OpenMP/matplotlib errors appear (e.g. `OMP: Error #178`), rerun outside a restricted sandbox.
 
-If `run.py` fails due to OpenMP / matplotlib environment errors (for example “OMP: Error #178 … Operation not permitted”), rerun in a normal environment where those libraries can access required shared memory, then continue.
+### 5) Verify before commit
 
-### 6) Verify changes before committing
-- Confirm the modified files are:
-  - `Time_Management/data/data2.csv`
-  - plot PNGs under `Time_Management/img/`
-- Run a `git diff` review for `data2.csv` to confirm the edits are limited to the newest dates.
-- If older historical rows changed unexpectedly, stop and ask the user what values should be kept.
+- Expect changes in `data/data2.csv` and selected PNGs under `img/`.
+- If older history rows changed unexpectedly, stop and ask the user.
 
-### 7) Commit + push
-- Create a branch name like:
-  - `chore/daily-time-update-YYYY-MM-DD`
-- Stage only:
-  - `Time_Management/data/data2.csv`
-  - updated PNGs under `Time_Management/img/`
-- Do NOT commit:
-  - `__pycache__/`
-  - `.DS_Store`
+### 6) Commit + push
 
-### 8) Open a PR
-- If `gh` is available, use it to create a PR.
-- Otherwise, use the browser URL pattern:
-  - `https://github.com/<owner>/<repo>/pull/new/<branch>`
+- Branch name e.g. `chore/daily-time-update-YYYY-MM-DD`
+- Stage only `data/data2.csv` and updated `img/*.png`
+- Do **not** commit `__pycache__/`, `.DS_Store`
+
+### 7) PR
+
+- `gh pr create` if available; else `https://github.com/<owner>/<repo>/pull/new/<branch>`
 
 ## Example
 
-User request: “add today’s entry”
-Agent behavior:
-1. Detect today is `2026-03-25, Wednesday`.
-2. Read last row `2026-03-24, Tuesday` and see today is missing.
-3. Ask for today’s `Work/Development/Self-Care` hours, then append:
-   `2026-03-25,Wednesday,<Work>,<Development>,<Self-Care>,<Others_last>`.
-4. Run `python run.py`, review `git diff`, commit CSV + PNGs, push branch, open PR.
+User: “daily time update — add rows first so I can enter inputs”
 
+1. Last row `2026-03-25`; today `2026-03-29`; `Others` was `149`.
+2. Append `2026-03-26` … `2026-03-29` each as `0.0,0.0,0.0,149`.
+3. Wait for user to edit hours.
+4. User says “done” → run `run.py` → commit CSV + PNGs → push → PR.
