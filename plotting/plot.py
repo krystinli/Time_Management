@@ -167,7 +167,7 @@ def plot_week_trend(
         img_name,
         weeks_count = 8,
     ):
-    """Plot bar chart that represents monthly trends of a specific column.
+    """Plot bar chart of weekly totals; x-axis is ISO week start (Monday).
 
     Parameters
     ----------
@@ -181,64 +181,48 @@ def plot_week_trend(
         Colour of the bars after 2022-02
     img_name : str
         File name of the img saved under img/
-    months_count : str
-        Number of months included in the plot
+    weeks_count : int
+        Number of recent weeks to include
 
     Returns
     -------
     plot : matplotlib
         bar chart
     """
-    # create Year-Month column
-    # data["Year-Month"] = data["Date"].apply(lambda x: x.strftime("%Y-%m"))
-    data["Year-Week"] = data["Date"].apply(lambda x: x.strftime("%Y") + f"-{x.isocalendar()[1]}")
+    df = data.copy()
+    df["Date"] = pd.to_datetime(df["Date"])
+    # Monday = start of ISO week (pandas: Monday=0)
+    df["WeekStart"] = df["Date"] - pd.to_timedelta(df["Date"].dt.dayofweek, unit="D")
+    df["WeekStart"] = df["WeekStart"].dt.normalize()
 
-    # transform df into a weekly aggregate
-    weekly_data = data[["Year-Week", colname]].groupby(
-        ["Year-Week"]).sum().reset_index().sort_values(["Year-Week"])
-
-    # filter out most recent months
+    weekly_data = df.groupby("WeekStart", as_index=False)[colname].sum()
+    weekly_data = weekly_data.sort_values("WeekStart")
     weekly_data_recent = weekly_data.tail(weeks_count)
 
-    # plot bar chart
+    x_dates = weekly_data_recent["WeekStart"]
+    x_labels = x_dates.dt.strftime("%Y-%m-%d")
+    y = weekly_data_recent[colname]
+
+    cutoff = pd.Timestamp(date.today() - timedelta(weeks=4))
+    cutoff_monday = cutoff - pd.Timedelta(days=int(cutoff.dayofweek))
+    mask_old = weekly_data_recent["WeekStart"] <= cutoff_monday
+
     fig, ax = plt.subplots()
     fig.set_size_inches(18, 5) # img size
 
-    # conditional colour
-    x = weekly_data_recent["Year-Week"]
-    y = weekly_data_recent[colname]
+    idx = np.arange(len(weekly_data_recent))
+    colors = np.where(mask_old.to_numpy(), color1, color2)
+    bars = ax.bar(idx, y, color=colors)
+    ax.set_xticks(idx)
+    ax.set_xticklabels(x_labels, rotation=45, ha="right")
 
-    # colour change in plots
-    recent_month = (date.today() - timedelta(weeks=4)).strftime("%Y-%U")
-    mask1 = x <= recent_month
-    mask2 = x > recent_month
-
-    # plt.bar
-    bars1 = ax.bar(
-        x[mask1],
-        y[mask1],
-        color = color1,
-    )
-    bars2 = ax.bar(
-        x[mask2],
-        y[mask2],
-        color = color2,
-    )
-
-    # labels
     ax.set(
-        xlabel = "Year-Month-Week",
+        xlabel = "Week start (Monday)",
         ylabel = "Total Weekly Hours",
         title = img_name,
     )
-    ax.bar_label(
-        bars1,
-        fontsize = 14,
-    )
-    ax.bar_label(
-        bars2,
-        fontsize = 14,
-    )
+    ax.bar_label(bars, fontsize=14)
+    plt.tight_layout()
     plt.savefig("img/" + img_name + ".png")
     print("Generated plot for", img_name)
 
