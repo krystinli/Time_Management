@@ -95,9 +95,9 @@ def plot_month_trend(
     colname : str
         Name of the column in data being plotted
     color1 : str
-        Colour of the bars before equal 2022-02
+        Colour of the bars before the recent window
     color2 : str
-        Colour of the bars after 2022-02
+        Colour of the bars from 4 months ago through today
     img_name : str
         File name of the img saved under img/
     months_count : str
@@ -126,9 +126,10 @@ def plot_month_trend(
     x = monthly_data_recent["Year-Month"]
     y = monthly_data_recent[colname]
 
-    # colour change in plots
-    mask1 = x <= "2025-10"
-    mask2 = x > "2025-10" # change month
+    # colour change starts at the month from 4 months ago (relative to today)
+    cutoff_ym = (pd.Timestamp(date.today()) - pd.DateOffset(months=4)).strftime("%Y-%m")
+    mask1 = x < cutoff_ym
+    mask2 = x >= cutoff_ym
 
     # plt.bar
     bars1 = ax.bar(
