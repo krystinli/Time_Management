@@ -227,6 +227,69 @@ def plot_week_trend(
     plt.savefig("img/" + img_name + ".png")
     print("Generated plot for", img_name)
 
+
+def plot_daily_hours_breakdown(
+        data,
+        img_name="total_plot_daily",
+        days_count=20,
+    ):
+    """Plot recent daily hours as stacked bars split by tracked category.
+
+    Parameters
+    ----------
+    data : DataFrame
+        Updated data with the new entries.
+    img_name : str
+        File name of the image saved under img/.
+    days_count : int
+        Number of recent days to include.
+
+    Returns
+    -------
+    plot : matplotlib
+        Stacked bar chart.
+    """
+    categories = ["Self-Care", "Work", "Development"]
+    colors = ["#9E9E9E", "#4C78A8", "#E78AC3"]
+
+    daily_data = data.copy()
+    daily_data["Date"] = pd.to_datetime(daily_data["Date"])
+    daily_data = daily_data.sort_values("Date").tail(days_count)
+    daily_data.set_index("Date", inplace=True)
+
+    fig, ax = plt.subplots()
+    fig.set_size_inches(18, 5)
+
+    daily_data[categories].plot(
+        kind="bar",
+        stacked=True,
+        color=colors,
+        width=0.8,
+        ax=ax,
+    )
+
+    totals = daily_data[categories].sum(axis=1)
+    for index, total in enumerate(totals):
+        if total > 0:
+            ax.text(index, total + 0.1, f"{total:g}", ha="center", fontsize=10)
+
+    ax.set(
+        xlabel="Date",
+        ylabel="Daily Hours",
+        title="Daily Hours by Category",
+    )
+    ax.set_xticklabels(
+        daily_data.index.strftime("%Y-%m-%d"),
+        rotation=45,
+        ha="right",
+    )
+    ax.legend(title="Category", ncol=3)
+    plt.tight_layout()
+    plt.savefig("img/" + img_name + ".png", bbox_inches="tight")
+    plt.close(fig)
+    print("Generated plot for", img_name)
+
+
 def plot_day_trend(
         data,
         colname,
