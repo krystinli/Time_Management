@@ -11,7 +11,10 @@ This file records durable context and working notes for the Time Management repo
 - After each new input, report today's provisional totals together with the five most recent recorded days.
 - At 9:00 PM America/Toronto time, ask for missing values and confirmation of the final daily totals.
 - Do not write, commit, or push provisional totals before confirmation.
-- After confirmation, append or correct today's row, validate the CSV, stage only `data/data2.csv`, commit with `update time`, and push `main` to `origin`.
+- After confirmation, append or correct today's row and validate the CSV.
+- Run `python3 run.py` from the repository root to refresh the tracked charts under `img/`.
+- Verify that `run.py` completes successfully, revalidate `data/data2.csv`, and review the generated image changes.
+- Stage `data/data2.csv` together with only the tracked image files changed by `run.py`, commit them in one `update time` commit, and push `main` to `origin`.
 - Do not commit local artifacts such as `.idea/` or `plotting/__pycache__/`.
 
 ## Flexible `Others` column
