@@ -8,10 +8,12 @@ This file records durable context and working notes for the Time Management repo
 - Columns are `Date`, `Day`, `Work`, `Development`, `Self-Care`, and `Others`.
 - `Work`, `Development`, and `Self-Care` are daily hour totals.
 - Inputs for those three columns are additive unless explicitly described as replacements or corrections.
+- Treat any missing `Work`, `Development`, or `Self-Care` value as `0.0` unless the user later supplies a value or correction.
 - After each new input, report today's provisional totals together with the five most recent recorded days.
-- At 9:00 PM America/Toronto time, ask for missing values and confirmation of the final daily totals.
+- At 9:00 PM America/Toronto time, show any assumed zeros and ask for confirmation of the final daily totals.
 - Do not write, commit, or push provisional totals before confirmation.
 - After confirmation, append or correct today's row and validate the CSV.
+- Never create or update future-dated rows. Record today only using the current America/Toronto date, or a past date explicitly named by the user.
 - Run `python3 run.py` from the repository root to refresh the tracked charts under `img/`.
 - Verify that `run.py` completes successfully, revalidate `data/data2.csv`, and review the generated image changes.
 - Stage `data/data2.csv` together with only the tracked image files changed by `run.py`, commit them in one `update time` commit, and push `main` to `origin`.
