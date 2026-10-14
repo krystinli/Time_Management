@@ -29,6 +29,15 @@ This file records durable context and working notes for the Time Management repo
 
 ## Notes log
 
+### 2026-10-13 — Complete time-log updates
+
+- Read this memory before updating the time log. The user explicitly wants every update to include the related charts; updating the CSV alone is incomplete.
+- After saving new or corrected hours, regenerate all 10 current time-tracking charts in `img/`: `work_plot.png`, `work_plot_monthly.png`, `dev_plot.png`, `dev_plot_monthly.png`, `care_plot.png`, `care_plot_monthly.png`, `total_plot.png`, `total_plot_daily.png`, `total_plot_monthly.png`, and `work_plot_weekly.png`.
+- Validate the saved dates and hours, confirm chart generation succeeds, and inspect the refreshed charts against the newest recorded entries before reporting completion.
+- When the user requests a commit and push, include the updated dataset and refreshed charts together. Check the diff before committing and verify the push succeeds; never report a CSV-only push as a complete update.
+- Use a Python environment with pandas, numpy, and matplotlib. `/opt/anaconda3/bin/python` successfully generated the charts on this date. Disable bytecode writes to avoid changing tracked cache files.
+- Preserve the recorded dates when refreshing charts; do not invent missing-day entries or add future dates. Historical 2022 charts and journal illustrations need refreshing only when their underlying content changes or the user requests it.
+
 ### 2026-08-22
 
 - Created this repository memory file.
